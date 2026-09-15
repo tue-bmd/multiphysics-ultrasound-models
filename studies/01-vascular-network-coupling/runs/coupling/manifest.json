@@ -1,0 +1,224 @@
+{
+ "schema": 5,
+ "kind": "coupling",
+ "config": {
+  "n_feeders": 4,
+  "feed_d": 0.0006,
+  "d_root": 0.0005,
+  "alpha": 0.8,
+  "gamma_med": 10.0,
+  "tort_mean": 1.25,
+  "d_term_gland": 3e-05,
+  "d_term_rve": 2e-05,
+  "rve_half": 0.003,
+  "P_ART_mmHg": 70.0,
+  "P_ART_END_mmHg": 35.0,
+  "R_LAT": 0.0005,
+  "H": 5000.0,
+  "R_comp": 0.003,
+  "TAU_CAP": 1.0,
+  "CV_CAP": 0.5,
+  "AIF_MU_s": 10.0,
+  "AIF_SIG": 0.55,
+  "RHO_MAX": 0.7,
+  "T_END_s": 163.84,
+  "shell_radii_mm": [
+   0.75,
+   1.0,
+   1.5,
+   2.0
+  ],
+  "n_dir": 48,
+  "vox_half_mm": 0.375,
+  "n_inputs": 24,
+  "poiseuille": [
+   false,
+   true
+  ],
+  "tfs": [
+   "new",
+   "old"
+  ],
+  "causal_rules": [
+   "front20",
+   "front10",
+   "moment"
+  ]
+ },
+ "seeds": [
+  100,
+  101,
+  102,
+  103,
+  104
+ ],
+ "expected_records": 90,
+ "code_sha256": "5fc58328873ae08f7eaf86d37c5897c82cad9c9ed30bcae564f73eaa708467c8",
+ "versions": {
+  "python": "3.13.9",
+  "numpy": "2.3.5",
+  "scipy": "1.16.3"
+ },
+ "started": "2026-09-13T16:19:15",
+ "effective": {
+  "n_rve": 2,
+  "n_inputs": 12,
+  "small": false,
+  "dt_s": 0.02,
+  "t_end_s": 163.84,
+  "estimator": {
+   "kernel": "plug",
+   "R_mm": 1.0,
+   "tf": "new",
+   "rule": "front20"
+  },
+  "support_radius_mm": 3.0,
+  "arms": [
+   {
+    "name": "tort_1.45",
+    "locus": "geometry",
+    "purpose": "geometry: path tortuosity raised, lumen volume nearly held",
+    "changed": {
+     "tort_mean": 1.45
+    }
+   },
+   {
+    "name": "gamma_6",
+    "locus": "geometry",
+    "purpose": "geometry: shorter segments per diameter, denser tree",
+    "changed": {
+     "gamma_med": 6.0
+    }
+   },
+   {
+    "name": "alpha_0.6",
+    "locus": "geometry",
+    "purpose": "geometry: branching asymmetry lowered (the Zamir daughter ratio, not the Murray exponent)",
+    "changed": {
+     "alpha": 0.6
+    }
+   },
+   {
+    "name": "dterm_gland_40",
+    "locus": "geometry",
+    "purpose": "geometry: coarser explicit terminals, 30 to 40 um.  This is a resolution change as much as a structural one - it moves where the explicit tree stops and the lumped bed begins - and is labelled as such wherever it is reported",
+    "changed": {
+     "d_term_gland": 4e-05
+    }
+   },
+   {
+    "name": "H_3k",
+    "locus": "mechanics",
+    "purpose": "mechanics only: matrix modulus, enters the compliance law alone",
+    "changed": {
+     "H": 3000.0
+    }
+   },
+   {
+    "name": "H_10k",
+    "locus": "mechanics",
+    "purpose": "mechanics only: matrix modulus, enters the compliance law alone",
+    "changed": {
+     "H": 10000.0
+    }
+   },
+   {
+    "name": "P_ART_60",
+    "locus": "flow",
+    "purpose": "flow only: arterial inlet pressure lowered, geometry untouched",
+    "changed": {
+     "P_ART_mmHg": 60.0
+    }
+   },
+   {
+    "name": "P_ART_90",
+    "locus": "flow",
+    "purpose": "flow only: arterial inlet pressure raised, geometry untouched",
+    "changed": {
+     "P_ART_mmHg": 90.0
+    }
+   }
+  ]
+ },
+ "g_bed0": {
+  "100": 3.904320561101799e-16,
+  "101": 3.9047484755748807e-16,
+  "102": 3.9350934178169425e-16,
+  "103": 3.891247021169865e-16,
+  "104": 3.875781168605702e-16
+ },
+ "baseline_fingerprint": {
+  "100": {
+   "topology": "b0936b77126507b4",
+   "path": "59034cd8e0fe7db7"
+  },
+  "101": {
+   "topology": "9e69324fab1bc74b",
+   "path": "110c8b3e44025de4"
+  },
+  "102": {
+   "topology": "bca092068d0651bd",
+   "path": "b3de986d2860df4e"
+  },
+  "103": {
+   "topology": "43501200a05766d7",
+   "path": "0f222519aae1644a"
+  },
+  "104": {
+   "topology": "fbcd45a542b4667a",
+   "path": "f6e406e7f94369e6"
+  }
+ },
+ "travel_time_bounds": {
+  "baseline|100": 70.60759949569847,
+  "tort_1.45|100": 72.7490601450482,
+  "gamma_6|100": 66.8660601180782,
+  "alpha_0.6|100": 86.54596872000289,
+  "dterm_gland_40|100": 70.62834434092409,
+  "H_3k|100": 70.60759949569847,
+  "H_10k|100": 70.60759949569847,
+  "P_ART_60|100": 72.07337628433338,
+  "P_ART_90|100": 68.74856551986885,
+  "baseline|101": 71.52474162824015,
+  "tort_1.45|101": 73.92271490819094,
+  "gamma_6|101": 67.12942680151474,
+  "alpha_0.6|101": 82.51280641784342,
+  "dterm_gland_40|101": 74.14924033409245,
+  "H_3k|101": 71.52474162824015,
+  "H_10k|101": 71.52474162824015,
+  "P_ART_60|101": 73.16689190390228,
+  "P_ART_90|101": 69.44201444935157,
+  "baseline|102": 71.25370627014578,
+  "tort_1.45|102": 73.60122697440066,
+  "gamma_6|102": 66.71749456311953,
+  "alpha_0.6|102": 87.26810868006314,
+  "dterm_gland_40|102": 70.3189406527288,
+  "H_3k|102": 71.25370627014578,
+  "H_10k|102": 71.25370627014578,
+  "P_ART_60|102": 72.84373436155902,
+  "P_ART_90|102": 69.2370852761583,
+  "baseline|103": 71.42335902820554,
+  "tort_1.45|103": 73.78241076509212,
+  "gamma_6|103": 66.80964147631241,
+  "alpha_0.6|103": 80.5518853539798,
+  "dterm_gland_40|103": 70.34954722639918,
+  "H_3k|103": 71.42335902820554,
+  "H_10k|103": 71.42335902820554,
+  "P_ART_60|103": 73.04601265001487,
+  "P_ART_90|103": 69.36535931274004,
+  "baseline|104": 71.2989345216903,
+  "tort_1.45|104": 73.72592755654293,
+  "gamma_6|104": 66.65882386211817,
+  "alpha_0.6|104": 83.9155347024638,
+  "dterm_gland_40|104": 71.03184696868703,
+  "H_3k|104": 71.2989345216903,
+  "H_10k|104": 71.2989345216903,
+  "P_ART_60|104": 72.8976603537852,
+  "P_ART_90|104": 69.27128224683828
+ },
+ "finished": "2026-09-13T17:27:04",
+ "records": 90,
+ "failed": 0,
+ "records_sha256": "9bbe2530d16fbd2e17f4e81c6681c7fe18825ecdb174ab8858bccf5f2c47c49b",
+ "records_bytes": 353730
+}

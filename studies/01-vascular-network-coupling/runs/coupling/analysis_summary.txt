@@ -1,0 +1,228 @@
+OK   runs/coupling
+     90 valid records, 0 errored, 0 unparsable, seeds [100, 101, 102, 103, 104]
+     per condition: {'baseline': 5, 'tort_1.45': 5, 'gamma_6': 5, 'alpha_0.6': 5, 'dterm_gland_40': 5, 'H_3k': 5, 'H_10k': 5, 'P_ART_60': 5, 'P_ART_90': 5}
+     warning  written by a different source version (manifest 5fc58328873a, current c421165683c4): the numbers are not invalidated, but their provenance cannot be verified against this checkout
+==============================================================================
+runs/coupling   90 records, 5 glands, arms: tort_1.45, gamma_6, alpha_0.6, dterm_gland_40, H_3k, H_10k, P_ART_60, P_ART_90
+
+COMPLIANCE-LAW IDENTITY, amplitude per strain against phi of the region
+  89 volumes, relative difference: median 1.17e-16, max 5.49e-16
+  this is a property of the imposed law C_i = V_i / (H + K_wall), not
+  evidence that a measured relaxation identifies phi in tissue
+
+tort_1.45     acts on: geometry    10 paired volumes
+   family    quantity              median      range over glands  glands verdict
+   network   phi_cube              +0.063       [+0.062, +0.065]       5 moved
+   network   k_mean                -0.065       [-0.068, -0.031]       5 moved  (1 volume(s) without an effect)
+   network   k_x                   -0.034       [-0.065, -0.003]       4 moved  (3 volume(s) without an effect)
+   network   k_z                   -0.047       [-0.063, -0.034]       4 moved  (3 volume(s) without an effect)
+   network   T2                    +0.125       [+0.122, +0.129]       5 moved
+   network   d_perm                -0.000       [-0.000, +0.001]       5 undetermined
+   network   chi                   +0.003       [+0.000, +0.004]       5 moved
+   network   vessel_speed          -0.037       [-0.041, -0.034]       5 moved
+   network   n_blocked             +0.000       [+0.000, +0.000]       5 undetermined
+   drainage  relax_per_strain      +0.063       [+0.061, +0.064]       5 moved
+   drainage  tau_rc                +0.124       [+0.124, +0.126]       5 moved
+   drainage  spectrum_width        -0.000       [-0.002, +0.000]       5 undetermined
+   drainage  phi_region            +0.063       [+0.061, +0.064]       5 moved
+   transport area                  -0.003       [-0.049, +0.012]       5 undetermined
+   transport t_peak                +0.011       [+0.010, +0.013]       5 moved
+   transport mtt                   +0.008       [+0.007, +0.010]       5 moved
+   transport width                 +0.000       [+0.000, +0.001]       5 moved
+   transport bed_share             -0.009       [-0.045, +0.000]       5 undetermined
+   transport v                     -0.105       [-0.125, -0.088]       5 moved  (voxels valid in both 72, lost 3, gained 2, neither 43)
+   transport D                     -0.140       [-0.206, -0.118]       5 moved  (voxels valid in both 72, lost 3, gained 2, neither 43)
+
+gamma_6       acts on: geometry    10 paired volumes
+   family    quantity              median      range over glands  glands verdict
+   network   phi_cube              -0.340       [-0.640, +0.331]       5 undetermined
+   network   k_mean                -0.283       [-0.383, +0.819]       3 undetermined  (5 volume(s) without an effect)
+   network   k_x                   -0.390       [-0.491, -0.288]       2 too few glands  (7 volume(s) without an effect)
+   network   k_z                   -0.615       [-1.084, +0.547]       3 undetermined  (6 volume(s) without an effect)
+   network   T2                    -0.002       [-0.014, +0.025]       5 undetermined
+   network   d_perm                -0.138       [-0.289, +0.031]       5 undetermined
+   network   chi                   -0.111       [-0.274, +0.208]       5 undetermined  (voxels valid in both 9, lost 1, gained 0, neither 0)
+   network   vessel_speed          -0.087       [-0.319, +0.094]       5 undetermined  (voxels valid in both 9, lost 1, gained 0, neither 0)
+   network   n_blocked             +1.000       [-1.000, +3.000]       5 undetermined
+   drainage  relax_per_strain      -0.467       [-0.910, +0.362]       5 undetermined  (1 volume(s) without an effect)
+   drainage  tau_rc                -0.197       [-0.511, +0.001]       5 undetermined  (voxels valid in both 9, lost 1, gained 0, neither 0)
+   drainage  spectrum_width        -0.035       [-0.087, +0.058]       5 undetermined  (voxels valid in both 9, lost 1, gained 0, neither 0)
+   drainage  phi_region            -0.467       [-0.910, +0.362]       5 undetermined  (1 volume(s) without an effect)
+   transport area                  +0.109       [-0.649, +0.695]       5 undetermined  (voxels valid in both 57, lost 37, gained 5, neither 21)
+   transport t_peak                -0.021       [-0.026, -0.015]       5 moved  (voxels valid in both 57, lost 37, gained 5, neither 21)
+   transport mtt                   -0.016       [-0.020, -0.011]       5 moved  (voxels valid in both 57, lost 37, gained 5, neither 21)
+   transport width                 -0.000       [-0.001, +0.000]       5 undetermined  (voxels valid in both 57, lost 37, gained 5, neither 21)
+   transport bed_share             +0.130       [+0.000, +0.202]       5 undetermined  (voxels valid in both 57, lost 37, gained 5, neither 21)
+   transport v                     +0.518       [+0.338, +1.335]       5 moved  (voxels valid in both 32, lost 43, gained 14, neither 31)
+   transport D                     +0.582       [-3.468, +1.029]       5 undetermined  (voxels valid in both 32, lost 43, gained 14, neither 31)
+
+alpha_0.6     acts on: geometry    10 paired volumes
+   family    quantity              median      range over glands  glands verdict
+   network   phi_cube              -0.041       [-0.411, +0.306]       5 undetermined
+   network   k_mean                +0.359       [-1.661, +0.421]       4 undetermined  (3 volume(s) without an effect)
+   network   k_x                   +1.346       [-0.596, +2.567]       4 undetermined  (3 volume(s) without an effect)
+   network   k_z                   -1.597       [-3.479, -0.778]       3 moved  (4 volume(s) without an effect)
+   network   T2                    +0.009       [-0.017, +0.035]       5 undetermined
+   network   d_perm                +0.033       [-0.126, +0.268]       5 undetermined
+   network   chi                   -0.083       [-0.386, +0.664]       5 undetermined
+   network   vessel_speed          +0.023       [-0.017, +0.226]       5 undetermined
+   network   n_blocked             +0.000       [-1.000, +1.000]       5 undetermined
+   drainage  relax_per_strain      -0.033       [-0.415, +0.604]       5 undetermined
+   drainage  tau_rc                -0.091       [-0.278, +0.210]       5 undetermined
+   drainage  spectrum_width        +0.043       [+0.008, +0.097]       5 moved
+   drainage  phi_region            -0.033       [-0.415, +0.604]       5 undetermined
+   transport area                  -0.514       [-0.849, -0.057]       5 moved  (voxels valid in both 72, lost 22, gained 14, neither 12)
+   transport t_peak                +0.023       [+0.016, +0.040]       5 moved  (voxels valid in both 72, lost 22, gained 14, neither 12)
+   transport mtt                   +0.015       [+0.010, +0.032]       5 moved  (voxels valid in both 72, lost 22, gained 14, neither 12)
+   transport width                 +0.001       [-0.000, +0.003]       5 undetermined  (voxels valid in both 72, lost 22, gained 14, neither 12)
+   transport bed_share             +0.000       [-0.280, +0.286]       5 undetermined  (voxels valid in both 72, lost 22, gained 14, neither 12)
+   transport v                     -0.304       [-0.843, +0.002]       5 undetermined  (voxels valid in both 41, lost 34, gained 20, neither 25)
+   transport D                     -0.402       [-0.681, +0.762]       5 undetermined  (voxels valid in both 41, lost 34, gained 20, neither 25)
+
+dterm_gland_40  acts on: geometry    10 paired volumes
+   family    quantity              median      range over glands  glands verdict
+   network   phi_cube              +0.009       [-0.010, +0.059]       5 undetermined
+   network   k_mean                -0.143       [-0.220, +0.022]       5 undetermined  (1 volume(s) without an effect)
+   network   k_x                   -0.034       [-0.054, +0.631]       3 undetermined  (4 volume(s) without an effect)
+   network   k_z                   -1.226       [-1.405, +0.013]       4 undetermined  (3 volume(s) without an effect)
+   network   T2                    +0.002       [-0.004, +0.018]       5 undetermined
+   network   d_perm                +0.012       [-0.006, +0.066]       5 undetermined
+   network   chi                   -0.042       [-0.263, +0.187]       5 undetermined
+   network   vessel_speed          +0.044       [-0.014, +0.122]       5 undetermined
+   network   n_blocked             +0.000       [-1.000, +0.000]       5 undetermined
+   drainage  relax_per_strain      -0.014       [-0.043, +0.113]       5 undetermined
+   drainage  tau_rc                +0.042       [-0.078, +0.149]       5 undetermined
+   drainage  spectrum_width        +0.007       [-0.025, +0.046]       5 undetermined
+   drainage  phi_region            -0.014       [-0.043, +0.113]       5 undetermined
+   transport area                  +0.152       [-0.430, +0.397]       5 undetermined  (voxels valid in both 84, lost 10, gained 13, neither 13)
+   transport t_peak                -0.002       [-0.007, +0.001]       5 undetermined  (voxels valid in both 84, lost 10, gained 13, neither 13)
+   transport mtt                   -0.001       [-0.004, +0.001]       5 undetermined  (voxels valid in both 84, lost 10, gained 13, neither 13)
+   transport width                 -0.000       [-0.002, +0.000]       5 undetermined  (voxels valid in both 84, lost 10, gained 13, neither 13)
+   transport bed_share             -0.023       [-0.065, +0.094]       5 undetermined  (voxels valid in both 84, lost 10, gained 13, neither 13)
+   transport v                     +0.106       [+0.008, +0.266]       5 moved  (voxels valid in both 52, lost 23, gained 22, neither 23)
+   transport D                     +0.124       [-0.900, +0.487]       5 undetermined  (voxels valid in both 52, lost 23, gained 22, neither 23)
+
+H_3k          acts on: mechanics   10 paired volumes
+   family    quantity              median      range over glands  glands verdict
+   network   phi_cube              +0.000       [+0.000, +0.000]       5 undetermined
+   network   k_mean                +0.000       [+0.000, +0.000]       5 undetermined  (1 volume(s) without an effect)
+   network   k_x                   +0.000       [+0.000, +0.000]       4 undetermined  (3 volume(s) without an effect)
+   network   k_z                   +0.000       [+0.000, +0.000]       4 undetermined  (3 volume(s) without an effect)
+   network   T2                    +0.000       [+0.000, +0.000]       5 undetermined
+   network   d_perm                +0.000       [+0.000, +0.000]       5 undetermined
+   network   chi                   +0.000       [+0.000, +0.000]       5 undetermined
+   network   vessel_speed          +0.000       [+0.000, +0.000]       5 undetermined
+   network   n_blocked             +0.000       [+0.000, +0.000]       5 undetermined
+   drainage  relax_per_strain      +0.000       [-0.000, +0.000]       5 undetermined
+   drainage  tau_rc                +0.222       [+0.222, +0.222]       5 moved
+   drainage  spectrum_width        +0.000       [+0.000, +0.001]       5 moved
+   drainage  phi_region            +0.000       [+0.000, +0.000]       5 undetermined
+   transport area                  +0.000       [+0.000, +0.000]       5 undetermined
+   transport t_peak                +0.000       [+0.000, +0.000]       5 undetermined
+   transport mtt                   +0.000       [+0.000, +0.000]       5 undetermined
+   transport width                 +0.000       [+0.000, +0.000]       5 undetermined
+   transport bed_share             +0.000       [+0.000, +0.000]       5 undetermined
+   transport v                     +0.000       [+0.000, +0.000]       5 undetermined
+   transport D                     +0.000       [+0.000, +0.000]       5 undetermined
+
+H_10k         acts on: mechanics   10 paired volumes
+   family    quantity              median      range over glands  glands verdict
+   network   phi_cube              +0.000       [+0.000, +0.000]       5 undetermined
+   network   k_mean                +0.000       [+0.000, +0.000]       5 undetermined  (1 volume(s) without an effect)
+   network   k_x                   +0.000       [+0.000, +0.000]       4 undetermined  (3 volume(s) without an effect)
+   network   k_z                   +0.000       [+0.000, +0.000]       4 undetermined  (3 volume(s) without an effect)
+   network   T2                    +0.000       [+0.000, +0.000]       5 undetermined
+   network   d_perm                +0.000       [+0.000, +0.000]       5 undetermined
+   network   chi                   +0.000       [+0.000, +0.000]       5 undetermined
+   network   vessel_speed          +0.000       [+0.000, +0.000]       5 undetermined
+   network   n_blocked             +0.000       [+0.000, +0.000]       5 undetermined
+   drainage  relax_per_strain      +0.000       [+0.000, +0.000]       5 undetermined
+   drainage  tau_rc                -0.301       [-0.302, -0.300]       5 moved
+   drainage  spectrum_width        -0.002       [-0.003, -0.001]       5 moved
+   drainage  phi_region            +0.000       [+0.000, +0.000]       5 undetermined
+   transport area                  +0.000       [+0.000, +0.000]       5 undetermined
+   transport t_peak                +0.000       [+0.000, +0.000]       5 undetermined
+   transport mtt                   +0.000       [+0.000, +0.000]       5 undetermined
+   transport width                 +0.000       [+0.000, +0.000]       5 undetermined
+   transport bed_share             +0.000       [+0.000, +0.000]       5 undetermined
+   transport v                     +0.000       [+0.000, +0.000]       5 undetermined
+   transport D                     +0.000       [+0.000, +0.000]       5 undetermined
+
+P_ART_60      acts on: flow        10 paired volumes
+   family    quantity              median      range over glands  glands verdict
+   network   phi_cube              +0.000       [+0.000, +0.000]       5 undetermined
+   network   k_mean                +0.000       [+0.000, +0.000]       5 undetermined  (1 volume(s) without an effect)
+   network   k_x                   +0.000       [+0.000, +0.000]       4 undetermined  (3 volume(s) without an effect)
+   network   k_z                   +0.000       [+0.000, +0.000]       4 undetermined  (3 volume(s) without an effect)
+   network   T2                    +0.000       [+0.000, +0.000]       5 undetermined
+   network   d_perm                +0.000       [+0.000, +0.000]       5 undetermined
+   network   chi                   +0.000       [-0.000, +0.000]       5 undetermined
+   network   vessel_speed          -0.076       [-0.076, -0.076]       5 moved
+   network   n_blocked             +0.000       [+0.000, +0.000]       5 undetermined
+   drainage  relax_per_strain      +0.000       [+0.000, +0.000]       5 undetermined
+   drainage  tau_rc                +0.000       [-0.000, +0.000]       5 undetermined
+   drainage  spectrum_width        -0.000       [-0.000, +0.000]       5 undetermined
+   drainage  phi_region            +0.000       [+0.000, +0.000]       5 undetermined
+   transport area                  -0.049       [-0.076, -0.039]       5 moved
+   transport t_peak                +0.010       [+0.009, +0.010]       5 moved
+   transport mtt                   +0.007       [+0.007, +0.008]       5 moved
+   transport width                 +0.000       [+0.000, +0.000]       5 moved
+   transport bed_share             -0.006       [-0.034, +0.000]       5 undetermined
+   transport v                     -0.077       [-0.090, -0.066]       5 moved  (voxels valid in both 73, lost 2, gained 1, neither 44)
+   transport D                     -0.082       [-0.139, -0.069]       5 moved  (voxels valid in both 73, lost 2, gained 1, neither 44)
+
+P_ART_90      acts on: flow        10 paired volumes
+   family    quantity              median      range over glands  glands verdict
+   network   phi_cube              +0.000       [+0.000, +0.000]       5 undetermined
+   network   k_mean                +0.000       [+0.000, +0.000]       5 undetermined  (1 volume(s) without an effect)
+   network   k_x                   +0.000       [+0.000, +0.000]       4 undetermined  (3 volume(s) without an effect)
+   network   k_z                   +0.000       [+0.000, +0.000]       4 undetermined  (3 volume(s) without an effect)
+   network   T2                    +0.000       [+0.000, +0.000]       5 undetermined
+   network   d_perm                +0.000       [+0.000, +0.000]       5 undetermined
+   network   chi                   +0.000       [-0.000, +0.000]       5 undetermined
+   network   vessel_speed          +0.121       [+0.121, +0.121]       5 moved
+   network   n_blocked             +0.000       [+0.000, +0.000]       5 undetermined
+   drainage  relax_per_strain      +0.000       [+0.000, +0.000]       5 undetermined
+   drainage  tau_rc                -0.000       [-0.000, +0.000]       5 undetermined
+   drainage  spectrum_width        +0.000       [-0.000, +0.000]       5 undetermined
+   drainage  phi_region            +0.000       [+0.000, +0.000]       5 undetermined
+   transport area                  +0.084       [+0.064, +0.121]       5 moved
+   transport t_peak                -0.012       [-0.013, -0.012]       5 moved
+   transport mtt                   -0.009       [-0.010, -0.009]       5 moved
+   transport width                 -0.000       [-0.000, -0.000]       5 moved
+   transport bed_share             +0.008       [+0.000, +0.050]       5 undetermined
+   transport v                     +0.117       [+0.100, +0.131]       5 moved  (voxels valid in both 75, lost 0, gained 4, neither 41)
+   transport D                     +0.169       [+0.133, +0.205]       5 moved  (voxels valid in both 75, lost 0, gained 4, neither 41)
+
+==============================================================================
+CONTROL CHECKS
+  mechanics arms must leave network and transport unmoved;
+  flow arms must leave the geometric descriptors unmoved
+  (chi and the vessel speed depend on the flow and are excluded from that)
+  H_3k             mechanics  largest |effect| over 16 quantities: 0.00e+00  PASS
+  H_10k            mechanics  largest |effect| over 16 quantities: 0.00e+00  PASS
+  P_ART_60         flow       largest |effect| over 7 quantities: 0.00e+00  PASS
+  P_ART_90         flow       largest |effect| over 7 quantities: 0.00e+00  PASS
+
+==============================================================================
+WHICH FAMILIES MOVED
+  a family counts as moved when at least one of its quantities has a
+  gland-level range that does not contain zero
+  arm          acts on       network   drainage  transport
+  tort_1.45    geometry       7 of 9     3 of 4     5 of 7
+  gamma_6      geometry       0 of 9     0 of 4     3 of 7
+  alpha_0.6    geometry       1 of 9     1 of 4     3 of 7
+  dterm_gland_40 geometry       0 of 9     0 of 4     1 of 7
+  H_3k         mechanics      0 of 9     2 of 4     0 of 7
+  H_10k        mechanics      0 of 9     2 of 4     0 of 7
+  P_ART_60     flow           1 of 9     0 of 4     6 of 7
+  P_ART_90     flow           1 of 9     0 of 4     6 of 7
+
+  read the two control rows first: an arm acting only on the matrix
+  modulus that moves the transport family, or an arm acting only on the
+  driving pressure that moves the geometric descriptors, would mean the
+  arms are not doing what their names say, and the geometric rows could
+  not then be read as shared dependence
+
+  a shared dependence is not joint identifiability: two observables can
+  both depend on the same structure and still fail to determine it.

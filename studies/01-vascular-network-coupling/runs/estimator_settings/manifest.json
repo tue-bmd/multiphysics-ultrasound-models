@@ -1,0 +1,22 @@
+{
+  "kind": "derived summary, not a run archive",
+  "what": "reported dispersion per analysis setting, on one tissue whose contrast curves are identical across every row",
+  "aggregation": "median, min and max over the sampling volumes of one gland",
+  "excluded": {
+    "estimates_seen": 120000,
+    "not_ok_or_unusable": 39116,
+    "pinned_at_optimizer_bound": 6885,
+    "negative_dispersion": 11016,
+    "why": "a bound-pinned or negative value is a failure of the fit, not a dispersion estimate; including them would inflate the reported spread"
+  },
+  "source_archive": "estimators2",
+  "source_code_sha256": "bff062572074679fd08df74482ad27ea6707f6896d7531948d79bb60c8e5bab7",
+  "source_records_sha256": "7af13bdac79d9a3c9b804cd542a89e1b4e2f9f2171d52de16bd5ef556a0ded8e",
+  "source_record_count": 10,
+  "settings": 96,
+  "D_median_spread": [
+    0.00132855728428353,
+    8.313190671048858
+  ],
+  "note": "the full archive is 38 MB and is not shipped; its source hash above is a third source version, distinct from the coupling archive"
+}

@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+title: vascular-network coupling (v0)
+message: If you use this software or its results, please cite it.
+type: software
+version: 0.1.0
+date-released: 2026-09-10
+repository-code: "https://github.com/tue-bmd/multiphysics-ultrasound-models"
+url: "https://github.com/tue-bmd/multiphysics-ultrasound-models/tree/main/studies/01-vascular-network-coupling"
+abstract: >-
+  A v0 simulation study of vascular-network flow, intravascular tracer
+  transport, and vascular-compliance relaxation under compression. Paired
+  perturbations test whether mechanical and transport observables depend on the
+  same vascular organization.
+authors:
+  - family-names: Turco
+    given-names: Simona
+    affiliation: "Eindhoven University of Technology"
+    orcid: "https://orcid.org/0000-0002-1520-3930"
+license: BSD-3-Clause
+keywords:
+  - contrast-enhanced ultrasound
+  - microvascular network
+  - strain relaxation
+  - dispersion
+  - permeability

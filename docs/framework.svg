@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="560" viewBox="0 0 860 560" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="solid" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#6b6b6b"/>
+    </marker>
+    <marker id="dash" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#8a8a8a"/>
+    </marker>
+  </defs>
+
+  <rect width="860" height="560" fill="#ffffff"/>
+
+  <!-- target integrated framework, light gray -->
+  <g>
+    <rect x="290" y="30"  width="280" height="52" rx="7" fill="#f2f2f2" stroke="#9e9e9e"/>
+    <text x="430" y="61"  text-anchor="middle" font-size="14" fill="#3d3d3d">coupled vascularized-tissue model</text>
+
+    <rect x="290" y="132" width="280" height="52" rx="7" fill="#f2f2f2" stroke="#9e9e9e"/>
+    <text x="430" y="153" text-anchor="middle" font-size="14" fill="#3d3d3d">acoustic, mechanical, and</text>
+    <text x="430" y="172" text-anchor="middle" font-size="14" fill="#3d3d3d">transport fields</text>
+
+    <rect x="290" y="234" width="280" height="62" rx="7" fill="#f2f2f2" stroke="#9e9e9e"/>
+    <text x="430" y="259" text-anchor="middle" font-size="14" fill="#3d3d3d">B-mode, SWE, and CEUS</text>
+    <text x="430" y="278" text-anchor="middle" font-size="14" fill="#3d3d3d">measurement operators</text>
+
+    <rect x="290" y="346" width="280" height="52" rx="7" fill="#f2f2f2" stroke="#9e9e9e"/>
+    <text x="430" y="377" text-anchor="middle" font-size="14" fill="#3d3d3d">joint probabilistic inversion</text>
+
+    <rect x="290" y="448" width="280" height="62" rx="7" fill="#f2f2f2" stroke="#9e9e9e"/>
+    <text x="430" y="473" text-anchor="middle" font-size="14" fill="#3d3d3d">physiological parameters</text>
+    <text x="430" y="492" text-anchor="middle" font-size="14" fill="#3d3d3d">and uncertainty</text>
+
+    <path d="M430 82  L430 130" stroke="#6b6b6b" stroke-width="1.6" marker-end="url(#solid)"/>
+    <path d="M430 184 L430 232" stroke="#6b6b6b" stroke-width="1.6" marker-end="url(#solid)"/>
+    <path d="M430 296 L430 344" stroke="#6b6b6b" stroke-width="1.6" marker-end="url(#solid)"/>
+    <path d="M430 398 L430 446" stroke="#6b6b6b" stroke-width="1.6" marker-end="url(#solid)"/>
+  </g>
+
+  <!-- v0 studies, colored -->
+  <rect x="28" y="78" width="212" height="46" rx="7" fill="#cfe3f7" stroke="#2b6cb0" stroke-width="2"/>
+  <text x="134" y="99"  text-anchor="middle" font-size="12.5" fill="#11304f" font-weight="bold">v0: vascular-network</text>
+  <text x="134" y="115" text-anchor="middle" font-size="12.5" fill="#11304f" font-weight="bold">coupling</text>
+
+  <rect x="620" y="190" width="212" height="46" rx="7" fill="#d8f0d8" stroke="#2f7d32" stroke-width="2"/>
+  <text x="726" y="211" text-anchor="middle" font-size="12.5" fill="#14401a" font-weight="bold">v0: ideal-field</text>
+  <text x="726" y="227" text-anchor="middle" font-size="12.5" fill="#14401a" font-weight="bold">identifiability</text>
+
+  <rect x="28" y="300" width="212" height="46" rx="7" fill="#fbe0d0" stroke="#c05621" stroke-width="2"/>
+  <text x="134" y="321" text-anchor="middle" font-size="12.5" fill="#5a2b0c" font-weight="bold">v0: shared-operator</text>
+  <text x="134" y="337" text-anchor="middle" font-size="12.5" fill="#5a2b0c" font-weight="bold">identifiability</text>
+
+  <!-- dashed conceptual interfaces -->
+  <g stroke-dasharray="6 5" fill="none" stroke-width="1.5">
+    <path d="M240 92  L288 60"  stroke="#2b6cb0" marker-end="url(#dash)"/>
+    <path d="M240 112 L288 154" stroke="#2b6cb0" marker-end="url(#dash)"/>
+    <path d="M620 202 L572 164" stroke="#2f7d32" marker-end="url(#dash)"/>
+    <path d="M620 224 L572 366" stroke="#2f7d32" marker-end="url(#dash)"/>
+    <path d="M240 312 L288 272" stroke="#c05621" marker-end="url(#dash)"/>
+    <path d="M240 332 L288 368" stroke="#c05621" marker-end="url(#dash)"/>
+  </g>
+
+  <!-- legend -->
+  <g font-size="11.5" fill="#3d3d3d">
+    <rect x="620" y="330" width="16" height="12" rx="2" fill="#f2f2f2" stroke="#9e9e9e"/>
+    <text x="644" y="340">target integrated framework</text>
+    <rect x="620" y="352" width="5" height="12" rx="1" fill="#cfe3f7" stroke="#2b6cb0" stroke-width="1"/>
+    <rect x="625.5" y="352" width="5" height="12" rx="1" fill="#d8f0d8" stroke="#2f7d32" stroke-width="1"/>
+    <rect x="631" y="352" width="5" height="12" rx="1" fill="#fbe0d0" stroke="#c05621" stroke-width="1"/>
+    <text x="644" y="362">current v0 studies (independent)</text>
+    <path d="M620 378 L636 378" stroke="#8a8a8a" stroke-width="1.5" stroke-dasharray="6 5"/>
+    <text x="644" y="382">conceptual interface; not yet integrated</text>
+  </g>
+</svg>

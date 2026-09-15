@@ -1,0 +1,400 @@
+{
+  "version": "0.1.0",
+  "parameters": {
+    "w0": {
+      "transform": "log",
+      "nominal": 0.00035,
+      "prior_lo": 0.00012,
+      "prior_hi": 0.001,
+      "role": "operator",
+      "kind": "normal",
+      "unit": "m"
+    },
+    "x_c": {
+      "transform": "lin",
+      "nominal": 0.012,
+      "prior_lo": 0.009,
+      "prior_hi": 0.015,
+      "role": "free",
+      "kind": "normal",
+      "unit": "m"
+    },
+    "R": {
+      "transform": "log",
+      "nominal": 0.005,
+      "prior_lo": 0.002,
+      "prior_hi": 0.012,
+      "role": "free",
+      "kind": "normal",
+      "unit": "m"
+    },
+    "sig_e": {
+      "transform": "log",
+      "nominal": 0.0006,
+      "prior_lo": 0.0001,
+      "prior_hi": 0.004,
+      "role": "free",
+      "kind": "normal",
+      "unit": "m"
+    },
+    "b0": {
+      "transform": "log",
+      "nominal": 1.0,
+      "prior_lo": 0.3,
+      "prior_hi": 3.0,
+      "role": "nuisance",
+      "kind": "normal",
+      "unit": "1"
+    },
+    "db": {
+      "transform": "log",
+      "nominal": 0.5,
+      "prior_lo": 0.1,
+      "prior_hi": 2.0,
+      "role": "nuisance",
+      "kind": "normal",
+      "unit": "1"
+    },
+    "c_s": {
+      "transform": "log",
+      "nominal": 2.0,
+      "prior_lo": 1.0,
+      "prior_hi": 5.0,
+      "role": "free",
+      "kind": "normal",
+      "unit": "m/s"
+    },
+    "alpha0": {
+      "transform": "log",
+      "nominal": 40.0,
+      "prior_lo": 5.0,
+      "prior_hi": 400.0,
+      "role": "free",
+      "kind": "normal",
+      "unit": "Np/m"
+    },
+    "a_S": {
+      "transform": "log",
+      "nominal": 1e-05,
+      "prior_lo": 1e-06,
+      "prior_hi": 0.0001,
+      "role": "nuisance",
+      "kind": "normal",
+      "unit": "m"
+    },
+    "v": {
+      "transform": "log",
+      "nominal": 0.001,
+      "prior_lo": 0.0003,
+      "prior_hi": 0.004,
+      "role": "free",
+      "kind": "normal",
+      "unit": "m/s"
+    },
+    "D": {
+      "transform": "log",
+      "nominal": 1e-07,
+      "prior_lo": 1e-08,
+      "prior_hi": 1e-06,
+      "role": "free",
+      "kind": "normal",
+      "unit": "m^2/s"
+    },
+    "a_C": {
+      "transform": "log",
+      "nominal": 1.0,
+      "prior_lo": 0.2,
+      "prior_hi": 5.0,
+      "role": "nuisance",
+      "kind": "normal",
+      "unit": "1"
+    },
+    "t0": {
+      "transform": "lin",
+      "nominal": 1.0,
+      "prior_lo": 0.0,
+      "prior_hi": 4.0,
+      "role": "nuisance",
+      "kind": "uniform",
+      "unit": "s"
+    },
+    "gamma_swe": {
+      "transform": "log",
+      "nominal": 1.0,
+      "prior_lo": 0.9090909090909091,
+      "prior_hi": 1.1,
+      "role": "calibrated",
+      "kind": "normal",
+      "unit": "1"
+    },
+    "gamma_ceus": {
+      "transform": "log",
+      "nominal": 1.0,
+      "prior_lo": 0.9090909090909091,
+      "prior_hi": 1.1,
+      "role": "calibrated",
+      "kind": "normal",
+      "unit": "1"
+    },
+    "scale": {
+      "transform": "log",
+      "nominal": 1.0,
+      "prior_lo": 0.9803921568627451,
+      "prior_hi": 1.02,
+      "role": "calibrated",
+      "kind": "normal",
+      "unit": "1"
+    },
+    "w_bmode": {
+      "transform": "log",
+      "nominal": 0.00035,
+      "prior_lo": 0.00012,
+      "prior_hi": 0.001,
+      "role": "operator",
+      "kind": "normal",
+      "unit": "m"
+    },
+    "w_swe": {
+      "transform": "log",
+      "nominal": 0.0006325345840347388,
+      "prior_lo": 0.00043384789961459995,
+      "prior_hi": 0.0014560219778561037,
+      "role": "operator",
+      "kind": "normal",
+      "unit": "m"
+    },
+    "w_ceus": {
+      "transform": "log",
+      "nominal": 0.000875,
+      "prior_lo": 0.00030000000000000003,
+      "prior_hi": 0.0025,
+      "role": "operator",
+      "kind": "normal",
+      "unit": "m"
+    }
+  },
+  "roles": {
+    "free": "estimated from the observations",
+    "nuisance": "estimated, not reported as a result, not measured elsewhere",
+    "operator": "a nuisance acting inside the observation operator; the study is about one of them",
+    "calibrated": "measured independently of these observations",
+    "fixed": "held at a constant, with its consequence screened"
+  },
+  "truth": {
+    "w0": 0.00035,
+    "x_c": 0.012,
+    "R": 0.005,
+    "sig_e": 0.0006,
+    "b0": 1.0,
+    "db": 0.5,
+    "c_s": 2.0,
+    "alpha0": 40.0,
+    "a_S": 1e-05,
+    "v": 0.001,
+    "D": 1e-07,
+    "a_C": 1.0,
+    "t0": 1.0,
+    "gamma_swe": 1.0,
+    "gamma_ceus": 1.0,
+    "scale": 1.0,
+    "w_bmode": 0.00035,
+    "w_swe": 0.0006325345840347388,
+    "w_ceus": 0.000875
+  },
+  "reported": [
+    "sig_e",
+    "R",
+    "x_c",
+    "c_s",
+    "alpha0",
+    "v",
+    "D",
+    "w0"
+  ],
+  "fixed": {
+    "Y_atten": {
+      "value": 1.0,
+      "unit": null
+    },
+    "scale": {
+      "value": 1.0,
+      "unit": "1"
+    },
+    "track_kernel_m": {
+      "value": 0.0004,
+      "unit": null
+    }
+  },
+  "gamma_nominal": {
+    "swe": 1.0,
+    "ceus": 1.0
+  },
+  "psf_widths_at_nominal": {
+    "bmode": 0.00035,
+    "swe": 0.0006325345840347388,
+    "ceus": 0.000875
+  },
+  "transmit_hz": {
+    "bmode": 7000000.0,
+    "swe": 5000000.0,
+    "ceus": 2800000.0
+  },
+  "track_kernel_m": 0.0004,
+  "acquisition": {
+    "bmode": {
+      "x0": 0.0,
+      "x1": 0.03,
+      "n_x": 301,
+      "sigma": 0.02,
+      "enabled": true
+    },
+    "swe": {
+      "x0": 0.002,
+      "x1": 0.022,
+      "n_x": 41,
+      "t_end": 0.02,
+      "n_t": 200,
+      "f0": 200.0,
+      "bandwidth": 120.0,
+      "sigma": 1e-07,
+      "enabled": true
+    },
+    "ceus": {
+      "x0": 0.0,
+      "x1": 0.03,
+      "n_x": 61,
+      "t_first": 3.0,
+      "t_last": 22.0,
+      "n_t": 20,
+      "sigma_rel": 0.02,
+      "enabled": true,
+      "n_frames_used": 0
+    }
+  },
+  "arms": [
+    "independent",
+    "shared",
+    "shared_calibrated",
+    "oracle"
+  ],
+  "cases": [
+    {
+      "name": "main",
+      "windows": [
+        "bmode",
+        "swe",
+        "ceus"
+      ],
+      "n_frames_used": 0,
+      "gen_gamma": {},
+      "free_scale": false,
+      "note": "all three windows, every contrast frame, the assumed point-spread ratios",
+      "generating_gamma": {
+        "swe": 1.0,
+        "ceus": 1.0
+      }
+    },
+    {
+      "name": "one_frame",
+      "windows": [
+        "bmode",
+        "swe",
+        "ceus"
+      ],
+      "n_frames_used": 1,
+      "gen_gamma": {},
+      "free_scale": false,
+      "note": "information removal: one contrast frame, so the dispersion and the point spread are not separable",
+      "generating_gamma": {
+        "swe": 1.0,
+        "ceus": 1.0
+      }
+    },
+    {
+      "name": "no_ceus",
+      "windows": [
+        "bmode",
+        "swe"
+      ],
+      "n_frames_used": 0,
+      "gen_gamma": {},
+      "free_scale": false,
+      "note": "information removal: the contrast window is absent",
+      "generating_gamma": {
+        "swe": 1.0,
+        "ceus": 1.0
+      }
+    },
+    {
+      "name": "no_swe",
+      "windows": [
+        "bmode",
+        "ceus"
+      ],
+      "n_frames_used": 0,
+      "gen_gamma": {},
+      "free_scale": false,
+      "note": "how much the shear window contributes",
+      "generating_gamma": {
+        "swe": 1.0,
+        "ceus": 1.0
+      }
+    },
+    {
+      "name": "wrong_ratio",
+      "windows": [
+        "bmode",
+        "swe",
+        "ceus"
+      ],
+      "n_frames_used": 0,
+      "gen_gamma": {
+        "ceus": 1.15
+      },
+      "free_scale": false,
+      "note": "incorrect sharing: the contrast point spread is 15 percent wider than the nominal frequency scaling, and the shared arm assumes the nominal one",
+      "generating_gamma": {
+        "swe": 1.0,
+        "ceus": 1.15
+      }
+    },
+    {
+      "name": "calibrated_scale",
+      "windows": [
+        "bmode",
+        "swe",
+        "ceus"
+      ],
+      "n_frames_used": 0,
+      "gen_gamma": {},
+      "free_scale": true,
+      "note": "sensitivity: the reconstructed-to-true length scale is an uncertain calibrated measurement, in every arm",
+      "generating_gamma": {
+        "swe": 1.0,
+        "ceus": 1.0
+      }
+    }
+  ],
+  "coverage_truths": [
+    {
+      "name": "sharp",
+      "overrides": {
+        "sig_e": 0.0003
+      }
+    },
+    {
+      "name": "nominal",
+      "overrides": {}
+    },
+    {
+      "name": "diffuse",
+      "overrides": {
+        "sig_e": 0.0012
+      }
+    }
+  ],
+  "fingerprint": {
+    "code": "025c74012b30a80cc8bd16618931f25a1de70322c4f882fc8fc5f8dd41781daa",
+    "config": "66257bedf2cede6ff1d4b0bc3115c975533fd693c115884feac888b5982545ca"
+  }
+}

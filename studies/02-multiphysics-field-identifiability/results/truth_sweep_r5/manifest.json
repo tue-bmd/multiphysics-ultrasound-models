@@ -1,0 +1,44 @@
+{
+  "sweep_signature": "7772d34acc5a51463492db4b30f1debfc67e43e955cf45c694291ed94750ecc2",
+  "seed": 0,
+  "n_scenarios": 9,
+  "n_configurations": 8,
+  "n_replicates": 5,
+  "n_fits": 360,
+  "n_records_found": 360,
+  "configurations": [
+    "E2_ceus",
+    "E2_ceus_Acal",
+    "E3_joint_independent",
+    "E4_joint_constitutive_Cvcal",
+    "E5_joint_network",
+    "E8_relax_independent_matched",
+    "E8_relax_constitutive_Cvcal",
+    "E8_relax_constitutive_Cvcal_norm"
+  ],
+  "report": [
+    "mu",
+    "eta_s",
+    "phi",
+    "k",
+    "D",
+    "vmag",
+    "S_v",
+    "C_v"
+  ],
+  "derive_storage": true,
+  "calibrations_recentered": true,
+  "noise_pairing": "replicate r uses seed+r for every scenario and configuration, isolating truth/configuration effects",
+  "coverage_is_diagnostic": "the same standardized noise draws are reused across scenarios, so the scenario-by-replicate cells are not independent coverage experiments; 'covered' is a diagnostic field, not a coverage estimate",
+  "comparison_aggregation": "gains are formed within scenario and replicate, then summarized over the paired replicates as median and range",
+  "code_sha256": "dd48a2258c760e075de6400c0d43d384de5eb7eb6c82d71362438e5dac8754aa",
+  "spec_sha256": "dfec44c7e1cfb92b92d9af7ac494c79a67bb2cdadf7dfb2df0dadd1180caacd0",
+  "records_sha256": "7c02c71be50e16c2d69c2c2eb02ddd5b0105772a3b386bc4fdcaff338a638635",
+  "environment_deriving": {
+    "python": "3.10.12",
+    "numpy": "2.2.6",
+    "scipy": "1.15.3"
+  },
+  "environment_note": "the stored records carry no interpreter or library versions, so the generating environment cannot be recovered from them; 'environment_deriving' is the environment that produced these derived files",
+  "derived_at": "2026-09-14T12:19:24+00:00"
+}

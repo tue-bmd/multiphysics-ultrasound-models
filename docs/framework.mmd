@@ -1,0 +1,35 @@
+%% Roadmap toward an integrated multiphysics-ultrasound framework.
+%% Colored boxes are the current v0 studies, implemented independently.
+%% Light-gray boxes show the target integrated framework.
+%% Dashed arrows are conceptual interfaces that are not yet integrated.
+flowchart TB
+    T["coupled vascularized-tissue model"]
+    F["acoustic, mechanical, and<br/>transport fields"]
+    O["B-mode, SWE, and CEUS<br/>measurement operators"]
+    I["joint probabilistic inversion"]
+    P["physiological parameters<br/>and uncertainty"]
+
+    T --> F --> O --> I --> P
+
+    S1["v0: vascular-network coupling"]
+    S2["v0: ideal-field identifiability"]
+    S3["v0: shared-operator identifiability"]
+
+    S1 -.-> T
+    S1 -.-> F
+    S2 -.-> F
+    S2 -.-> I
+    S3 -.-> O
+    S3 -.-> I
+
+    classDef planned fill:#f2f2f2,stroke:#9e9e9e,stroke-width:1px,color:#3d3d3d;
+    classDef v0a fill:#cfe3f7,stroke:#2b6cb0,stroke-width:2px,color:#11304f;
+    classDef v0b fill:#d8f0d8,stroke:#2f7d32,stroke-width:2px,color:#14401a;
+    classDef v0c fill:#fbe0d0,stroke:#c05621,stroke-width:2px,color:#5a2b0c;
+
+    class T,F,O,I,P planned;
+    class S1 v0a;
+    class S2 v0b;
+    class S3 v0c;
+
+    linkStyle 4,5,6,7,8,9 stroke-dasharray: 5 5,stroke:#777;

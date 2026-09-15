@@ -1,0 +1,996 @@
+{
+  "version": "0.1.0",
+  "parameters": {
+    "mu": {
+      "transform": "log",
+      "nominal": 3000.0,
+      "prior_lo": 1000.0,
+      "prior_hi": 10000.0,
+      "role": "free",
+      "kind": "normal",
+      "unit": "Pa"
+    },
+    "eta_s": {
+      "transform": "log",
+      "nominal": 1.5,
+      "prior_lo": 0.1,
+      "prior_hi": 10.0,
+      "role": "free",
+      "kind": "normal",
+      "unit": "Pa s"
+    },
+    "phi": {
+      "transform": "log",
+      "nominal": 0.028,
+      "prior_lo": 0.005,
+      "prior_hi": 0.1,
+      "role": "free",
+      "kind": "normal",
+      "unit": "-"
+    },
+    "k": {
+      "transform": "log",
+      "nominal": 3.5e-13,
+      "prior_lo": 1e-14,
+      "prior_hi": 1e-11,
+      "role": "free",
+      "kind": "normal",
+      "unit": "m^2"
+    },
+    "D": {
+      "transform": "log",
+      "nominal": 1e-06,
+      "prior_lo": 1e-07,
+      "prior_hi": 1e-05,
+      "role": "free",
+      "kind": "normal",
+      "unit": "m^2 s^-1"
+    },
+    "vmag": {
+      "transform": "log",
+      "nominal": 0.0010488088481701515,
+      "prior_lo": 0.0001,
+      "prior_hi": 0.01,
+      "role": "free",
+      "kind": "normal",
+      "unit": "m s^-1"
+    },
+    "vth": {
+      "transform": "lin",
+      "nominal": 0.30627736916966936,
+      "prior_lo": 0.0,
+      "prior_hi": 3.141592653589793,
+      "role": "free",
+      "kind": "uniform",
+      "unit": "rad"
+    },
+    "vaz": {
+      "transform": "lin",
+      "nominal": 0.32175055439664224,
+      "prior_lo": -3.141592653589793,
+      "prior_hi": 3.141592653589793,
+      "role": "free",
+      "kind": "uniform",
+      "unit": "rad"
+    },
+    "C_v": {
+      "transform": "log",
+      "nominal": 0.001,
+      "prior_lo": 0.0001,
+      "prior_hi": 0.01,
+      "role": "free",
+      "kind": "normal",
+      "unit": "Pa^-1"
+    },
+    "S_v": {
+      "transform": "log",
+      "nominal": 2.8e-05,
+      "prior_lo": 1.4338978448964585e-06,
+      "prior_hi": 0.0003486998755034075,
+      "role": "free",
+      "kind": "normal",
+      "unit": "Pa^-1"
+    },
+    "M": {
+      "transform": "log",
+      "nominal": 96000.0,
+      "prior_lo": 10000.0,
+      "prior_hi": 10000000.0,
+      "role": "free",
+      "kind": "normal",
+      "unit": "Pa"
+    },
+    "F0": {
+      "transform": "log",
+      "nominal": 0.0004513,
+      "prior_lo": 4.5e-05,
+      "prior_hi": 0.0045,
+      "role": "nuisance",
+      "kind": "normal",
+      "unit": "N m^-1"
+    },
+    "Tp": {
+      "transform": "log",
+      "nominal": 0.0002,
+      "prior_lo": 5e-05,
+      "prior_hi": 0.0008,
+      "role": "nuisance",
+      "kind": "normal",
+      "unit": "s"
+    },
+    "A": {
+      "transform": "log",
+      "nominal": 1.0,
+      "prior_lo": 0.1,
+      "prior_hi": 10.0,
+      "role": "nuisance",
+      "kind": "normal",
+      "unit": "arb"
+    },
+    "t0": {
+      "transform": "lin",
+      "nominal": 4.0,
+      "prior_lo": 0.0,
+      "prior_hi": 15.0,
+      "role": "nuisance",
+      "kind": "uniform",
+      "unit": "s"
+    },
+    "P": {
+      "transform": "log",
+      "nominal": 500.0,
+      "prior_lo": 454.5454545454545,
+      "prior_hi": 550.0,
+      "role": "calibrated",
+      "kind": "normal",
+      "unit": "Pa"
+    },
+    "L": {
+      "transform": "log",
+      "nominal": 0.005,
+      "prior_lo": 0.004545454545454545,
+      "prior_hi": 0.0055000000000000005,
+      "role": "calibrated",
+      "kind": "normal",
+      "unit": "m"
+    }
+  },
+  "truth": {
+    "mu": 3000.0,
+    "eta_s": 1.5,
+    "phi": 0.028,
+    "k": 3.5e-13,
+    "D": 1e-06,
+    "vmag": 0.0010488088481701515,
+    "vth": 0.30627736916966936,
+    "vaz": 0.32175055439664224,
+    "C_v": 0.001,
+    "S_v": 2.8e-05,
+    "M": 96000.0,
+    "F0": 0.0004513,
+    "Tp": 0.0002,
+    "A": 1.0,
+    "t0": 4.0,
+    "P": 500.0,
+    "L": 0.005
+  },
+  "fixed": {
+    "rho": {
+      "value": 1050.0,
+      "unit": "kg m^-3"
+    },
+    "rho_f": {
+      "value": 1060.0,
+      "unit": "kg m^-3"
+    },
+    "eta_b": {
+      "value": 0.0035,
+      "unit": "Pa s"
+    },
+    "alpha_inf": {
+      "value": 1.0,
+      "unit": "-"
+    },
+    "alpha": {
+      "value": 1.0,
+      "unit": "-"
+    }
+  },
+  "acquisition": {
+    "swe": {
+      "x_min": 0.002,
+      "x_max": 0.012,
+      "n_x": 21,
+      "frame_rate": 8000.0,
+      "duration": 0.02,
+      "f_band": [
+        40.0,
+        800.0
+      ],
+      "geometry": "cylindrical",
+      "sigma": 2e-07
+    },
+    "ceus": {
+      "center": [
+        0.006,
+        0.0,
+        0.0
+      ],
+      "spacing": [
+        0.002,
+        0.002,
+        0.002
+      ],
+      "shape": [
+        3,
+        3,
+        3
+      ],
+      "frame_rate": 2.0,
+      "duration": 90.0,
+      "sigma_rel": 0.02,
+      "normalized": false,
+      "delivery": "concentration"
+    },
+    "relax": {
+      "enabled": false,
+      "frame_rate": 20.0,
+      "duration": 30.0,
+      "sigma": 1e-06
+    }
+  },
+  "prior_overrides": {
+    "A_calibrated": {
+      "A": {
+        "lo": 0.9090909090909091,
+        "hi": 1.1,
+        "role": "calibrated"
+      }
+    },
+    "C_v_calibrated": {
+      "C_v": {
+        "lo": 0.0006666666666666666,
+        "hi": 0.0015,
+        "role": "calibrated"
+      }
+    },
+    "P_nuisance": {
+      "P": {
+        "lo": 100.0,
+        "hi": 2500.0,
+        "role": "nuisance"
+      }
+    },
+    "S_v_matched_to_calibrated_compliance": {
+      "S_v": {
+        "lo": 4.737593400699694e-06,
+        "hi": 0.00010553881638009596,
+        "role": "matched"
+      }
+    }
+  },
+  "roles": {
+    "free": "estimated from the observations",
+    "nuisance": "estimated, not reported, not measured elsewhere",
+    "calibrated": "measured independently of the imaging observations",
+    "matched": "not measured; a marginal set equal to the one another configuration induces, so that two arms differ only in the structure under test",
+    "fixed": "held at a constant, with its consequence screened in E0",
+    "derived": "computed from others by a coupling relation"
+  },
+  "configurations": [
+    {
+      "name": "E1_swe",
+      "windows": [
+        "swe"
+      ],
+      "level": "independent",
+      "normalized": false,
+      "note": "shear window alone",
+      "free": [
+        "phi",
+        "k",
+        "mu",
+        "eta_s",
+        "F0",
+        "Tp",
+        "S_v"
+      ],
+      "overrides": []
+    },
+    {
+      "name": "E2_ceus",
+      "windows": [
+        "ceus"
+      ],
+      "level": "independent",
+      "normalized": false,
+      "note": "absolute occupancy alone",
+      "free": [
+        "phi",
+        "k",
+        "D",
+        "vmag",
+        "vth",
+        "vaz",
+        "A",
+        "t0",
+        "S_v"
+      ],
+      "overrides": []
+    },
+    {
+      "name": "E2n_ceus_norm",
+      "windows": [
+        "ceus"
+      ],
+      "level": "independent",
+      "normalized": true,
+      "note": "normalized curves alone",
+      "free": [
+        "phi",
+        "k",
+        "D",
+        "vmag",
+        "vth",
+        "vaz",
+        "A",
+        "t0",
+        "S_v"
+      ],
+      "overrides": []
+    },
+    {
+      "name": "E2_ceus_Acal",
+      "windows": [
+        "ceus"
+      ],
+      "level": "independent",
+      "normalized": false,
+      "note": "absolute occupancy, delivered amount calibrated",
+      "free": [
+        "phi",
+        "k",
+        "D",
+        "vmag",
+        "vth",
+        "vaz",
+        "A",
+        "t0",
+        "S_v"
+      ],
+      "overrides": [
+        "A"
+      ]
+    },
+    {
+      "name": "E3_joint_independent",
+      "windows": [
+        "swe",
+        "ceus"
+      ],
+      "level": "independent",
+      "normalized": false,
+      "note": "current protocol, independent coupling",
+      "free": [
+        "phi",
+        "k",
+        "mu",
+        "eta_s",
+        "F0",
+        "Tp",
+        "D",
+        "vmag",
+        "vth",
+        "vaz",
+        "A",
+        "t0",
+        "S_v"
+      ],
+      "overrides": [
+        "A"
+      ]
+    },
+    {
+      "name": "E4_joint_constitutive",
+      "windows": [
+        "swe",
+        "ceus"
+      ],
+      "level": "constitutive",
+      "normalized": false,
+      "note": "current protocol, constitutive coupling",
+      "free": [
+        "phi",
+        "k",
+        "mu",
+        "eta_s",
+        "F0",
+        "Tp",
+        "D",
+        "vmag",
+        "vth",
+        "vaz",
+        "A",
+        "t0",
+        "C_v"
+      ],
+      "overrides": [
+        "A"
+      ]
+    },
+    {
+      "name": "E5_joint_network",
+      "windows": [
+        "swe",
+        "ceus"
+      ],
+      "level": "network",
+      "normalized": false,
+      "note": "current protocol, network coupling",
+      "free": [
+        "phi",
+        "k",
+        "mu",
+        "eta_s",
+        "F0",
+        "Tp",
+        "D",
+        "vmag",
+        "vth",
+        "vaz",
+        "A",
+        "t0",
+        "C_v"
+      ],
+      "overrides": [
+        "A"
+      ]
+    },
+    {
+      "name": "E4_joint_constitutive_Cvcal",
+      "windows": [
+        "swe",
+        "ceus"
+      ],
+      "level": "constitutive",
+      "normalized": false,
+      "note": "current protocol, constitutive coupling, compliance calibrated",
+      "free": [
+        "phi",
+        "k",
+        "mu",
+        "eta_s",
+        "F0",
+        "Tp",
+        "D",
+        "vmag",
+        "vth",
+        "vaz",
+        "A",
+        "t0",
+        "C_v"
+      ],
+      "overrides": [
+        "A",
+        "C_v"
+      ]
+    },
+    {
+      "name": "E5_ceus_only_network",
+      "windows": [
+        "ceus"
+      ],
+      "level": "network",
+      "normalized": false,
+      "note": "contrast window alone, network-informed prior",
+      "free": [
+        "phi",
+        "k",
+        "D",
+        "vmag",
+        "vth",
+        "vaz",
+        "A",
+        "t0",
+        "C_v"
+      ],
+      "overrides": [
+        "A"
+      ]
+    },
+    {
+      "name": "E6_joint_independent_norm",
+      "windows": [
+        "swe",
+        "ceus"
+      ],
+      "level": "independent",
+      "normalized": true,
+      "note": "current protocol, independent coupling, normalized CEUS",
+      "free": [
+        "phi",
+        "k",
+        "mu",
+        "eta_s",
+        "F0",
+        "Tp",
+        "D",
+        "vmag",
+        "vth",
+        "vaz",
+        "A",
+        "t0",
+        "S_v"
+      ],
+      "overrides": [
+        "A"
+      ]
+    },
+    {
+      "name": "E6_joint_constitutive_norm",
+      "windows": [
+        "swe",
+        "ceus"
+      ],
+      "level": "constitutive",
+      "normalized": true,
+      "note": "current protocol, constitutive coupling, normalized CEUS",
+      "free": [
+        "phi",
+        "k",
+        "mu",
+        "eta_s",
+        "F0",
+        "Tp",
+        "D",
+        "vmag",
+        "vth",
+        "vaz",
+        "A",
+        "t0",
+        "C_v"
+      ],
+      "overrides": [
+        "A"
+      ]
+    },
+    {
+      "name": "E6_joint_network_norm",
+      "windows": [
+        "swe",
+        "ceus"
+      ],
+      "level": "network",
+      "normalized": true,
+      "note": "current protocol, network coupling, normalized CEUS",
+      "free": [
+        "phi",
+        "k",
+        "mu",
+        "eta_s",
+        "F0",
+        "Tp",
+        "D",
+        "vmag",
+        "vth",
+        "vaz",
+        "A",
+        "t0",
+        "C_v"
+      ],
+      "overrides": [
+        "A"
+      ]
+    },
+    {
+      "name": "E8_relax_independent",
+      "windows": [
+        "swe",
+        "ceus",
+        "relax"
+      ],
+      "level": "independent",
+      "normalized": false,
+      "note": "contingency, independent coupling, stress not measured",
+      "free": [
+        "phi",
+        "k",
+        "mu",
+        "eta_s",
+        "F0",
+        "Tp",
+        "D",
+        "vmag",
+        "vth",
+        "vaz",
+        "A",
+        "t0",
+        "M",
+        "P",
+        "L",
+        "S_v"
+      ],
+      "overrides": [
+        "A",
+        "P"
+      ]
+    },
+    {
+      "name": "E8_relax_constitutive",
+      "windows": [
+        "swe",
+        "ceus",
+        "relax"
+      ],
+      "level": "constitutive",
+      "normalized": false,
+      "note": "contingency, constitutive coupling, stress not measured",
+      "free": [
+        "phi",
+        "k",
+        "mu",
+        "eta_s",
+        "F0",
+        "Tp",
+        "D",
+        "vmag",
+        "vth",
+        "vaz",
+        "A",
+        "t0",
+        "M",
+        "P",
+        "L",
+        "C_v"
+      ],
+      "overrides": [
+        "A",
+        "P"
+      ]
+    },
+    {
+      "name": "E8_relax_network",
+      "windows": [
+        "swe",
+        "ceus",
+        "relax"
+      ],
+      "level": "network",
+      "normalized": false,
+      "note": "contingency, network coupling, stress not measured",
+      "free": [
+        "phi",
+        "k",
+        "mu",
+        "eta_s",
+        "F0",
+        "Tp",
+        "D",
+        "vmag",
+        "vth",
+        "vaz",
+        "A",
+        "t0",
+        "M",
+        "P",
+        "L",
+        "C_v"
+      ],
+      "overrides": [
+        "A",
+        "P"
+      ]
+    },
+    {
+      "name": "E8_relax_constitutive_norm",
+      "windows": [
+        "swe",
+        "ceus",
+        "relax"
+      ],
+      "level": "constitutive",
+      "normalized": true,
+      "note": "contingency, constitutive coupling, normalized CEUS",
+      "free": [
+        "phi",
+        "k",
+        "mu",
+        "eta_s",
+        "F0",
+        "Tp",
+        "D",
+        "vmag",
+        "vth",
+        "vaz",
+        "A",
+        "t0",
+        "M",
+        "P",
+        "L",
+        "C_v"
+      ],
+      "overrides": [
+        "A",
+        "P"
+      ]
+    },
+    {
+      "name": "E8_relax_constitutive_Pcal",
+      "windows": [
+        "swe",
+        "ceus",
+        "relax"
+      ],
+      "level": "constitutive",
+      "normalized": false,
+      "note": "contingency, constitutive coupling, stress calibrated",
+      "free": [
+        "phi",
+        "k",
+        "mu",
+        "eta_s",
+        "F0",
+        "Tp",
+        "D",
+        "vmag",
+        "vth",
+        "vaz",
+        "A",
+        "t0",
+        "M",
+        "P",
+        "L",
+        "C_v"
+      ],
+      "overrides": [
+        "A"
+      ]
+    },
+    {
+      "name": "E8_relax_constitutive_Cvcal",
+      "windows": [
+        "swe",
+        "ceus",
+        "relax"
+      ],
+      "level": "constitutive",
+      "normalized": false,
+      "note": "contingency, constitutive coupling, compliance calibrated",
+      "free": [
+        "phi",
+        "k",
+        "mu",
+        "eta_s",
+        "F0",
+        "Tp",
+        "D",
+        "vmag",
+        "vth",
+        "vaz",
+        "A",
+        "t0",
+        "M",
+        "P",
+        "L",
+        "C_v"
+      ],
+      "overrides": [
+        "A",
+        "C_v",
+        "P"
+      ]
+    },
+    {
+      "name": "E8_relax_network_Cvcal",
+      "windows": [
+        "swe",
+        "ceus",
+        "relax"
+      ],
+      "level": "network",
+      "normalized": false,
+      "note": "contingency, network coupling, compliance calibrated",
+      "free": [
+        "phi",
+        "k",
+        "mu",
+        "eta_s",
+        "F0",
+        "Tp",
+        "D",
+        "vmag",
+        "vth",
+        "vaz",
+        "A",
+        "t0",
+        "M",
+        "P",
+        "L",
+        "C_v"
+      ],
+      "overrides": [
+        "A",
+        "C_v",
+        "P"
+      ]
+    },
+    {
+      "name": "E8_relax_independent_matched",
+      "windows": [
+        "swe",
+        "ceus",
+        "relax"
+      ],
+      "level": "independent",
+      "normalized": false,
+      "note": "contingency, independent priors, storage marginal matched to the calibrated-compliance coupled arm",
+      "free": [
+        "phi",
+        "k",
+        "mu",
+        "eta_s",
+        "F0",
+        "Tp",
+        "D",
+        "vmag",
+        "vth",
+        "vaz",
+        "A",
+        "t0",
+        "M",
+        "P",
+        "L",
+        "S_v"
+      ],
+      "overrides": [
+        "A",
+        "P",
+        "S_v"
+      ]
+    },
+    {
+      "name": "E8_relax_constitutive_Cvcal_norm",
+      "windows": [
+        "swe",
+        "ceus",
+        "relax"
+      ],
+      "level": "constitutive",
+      "normalized": true,
+      "note": "contingency, constitutive coupling, compliance calibrated, normalized CEUS",
+      "free": [
+        "phi",
+        "k",
+        "mu",
+        "eta_s",
+        "F0",
+        "Tp",
+        "D",
+        "vmag",
+        "vth",
+        "vaz",
+        "A",
+        "t0",
+        "M",
+        "P",
+        "L",
+        "C_v"
+      ],
+      "overrides": [
+        "A",
+        "C_v",
+        "P"
+      ]
+    },
+    {
+      "name": "E7_E1_swe_push",
+      "windows": [
+        "swe"
+      ],
+      "level": "independent",
+      "normalized": false,
+      "note": "shear window alone, generated with the push departure",
+      "free": [
+        "phi",
+        "k",
+        "mu",
+        "eta_s",
+        "F0",
+        "Tp",
+        "S_v"
+      ],
+      "overrides": []
+    },
+    {
+      "name": "E7_E2_ceus_Acal_twocompartment",
+      "windows": [
+        "ceus"
+      ],
+      "level": "independent",
+      "normalized": false,
+      "note": "absolute occupancy, delivered amount calibrated, generated with the twocompartment departure",
+      "free": [
+        "phi",
+        "k",
+        "D",
+        "vmag",
+        "vth",
+        "vaz",
+        "A",
+        "t0",
+        "S_v"
+      ],
+      "overrides": [
+        "A"
+      ]
+    },
+    {
+      "name": "E7_E8_relax_constitutive_Cvcal_spectrum",
+      "windows": [
+        "swe",
+        "ceus",
+        "relax"
+      ],
+      "level": "constitutive",
+      "normalized": false,
+      "note": "contingency, constitutive coupling, compliance calibrated, generated with the spectrum departure",
+      "free": [
+        "phi",
+        "k",
+        "mu",
+        "eta_s",
+        "F0",
+        "Tp",
+        "D",
+        "vmag",
+        "vth",
+        "vaz",
+        "A",
+        "t0",
+        "M",
+        "P",
+        "L",
+        "C_v"
+      ],
+      "overrides": [
+        "A",
+        "C_v",
+        "P"
+      ]
+    },
+    {
+      "name": "E7_E8_relax_constitutive_Cvcal_all",
+      "windows": [
+        "swe",
+        "ceus",
+        "relax"
+      ],
+      "level": "constitutive",
+      "normalized": false,
+      "note": "contingency, constitutive coupling, compliance calibrated, generated with the all departure",
+      "free": [
+        "phi",
+        "k",
+        "mu",
+        "eta_s",
+        "F0",
+        "Tp",
+        "D",
+        "vmag",
+        "vth",
+        "vaz",
+        "A",
+        "t0",
+        "M",
+        "P",
+        "L",
+        "C_v"
+      ],
+      "overrides": [
+        "A",
+        "C_v",
+        "P"
+      ]
+    }
+  ]
+}

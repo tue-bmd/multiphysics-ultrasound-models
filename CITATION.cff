@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+title: Computational studies toward multiphysics ultrasound
+message: If you use this software or its results, please cite it.
+type: software
+version: 0.1.0
+date-released: 2026-09-14
+repository-code: "https://github.com/tue-bmd/multiphysics-ultrasound-models"
+license: BSD-3-Clause
+abstract: >-
+  Three v0 simulation studies of multiphysics ultrasound modeling: vascular
+  organization and its effects on mechanical relaxation and contrast transport,
+  parameter identifiability from idealized mechanical and transport fields, and
+  information transfer through a shared measurement operator.
+keywords:
+  - quantitative ultrasound
+  - inverse problems
+  - identifiability
+  - uncertainty quantification
+  - contrast-enhanced ultrasound
+  - shear wave elastography
+authors:
+  - family-names: Turco
+    given-names: Simona
+    email: s.turco@tue.nl
+    affiliation: Eindhoven University of Technology
+    orcid: "https://orcid.org/0000-0002-1520-3930"

@@ -1,0 +1,132 @@
+{
+  "groups": {
+    "blur over margin width, w_B / sig_e": 0.5833333333333337,
+    "margin width over half-width, sig_e / R": 0.1199999999999999,
+    "quadrature sum over margin, sig_obs / sig_e": 1.157703665787484,
+    "profile samples per observed margin": 6.946221994724901,
+    "shear wavelength (mm)": 10.0,
+    "aperture in wavelengths": 1.9999999999999996,
+    "blur in wavelengths, w_S / lambda": 0.06325345840347389,
+    "blur attenuation at f0, exp(-(k w)^2/2)": 0.9240615708720935,
+    "medium attenuation over the aperture": 0.4493289641172217,
+    "blur share of variance, first frame": 0.6568364611260056,
+    "blur share of variance, last frame": 0.15418502202643183,
+    "Peclet over the window, v L / D": 300.0000000000002,
+    "transit fraction, v T / L": 0.7000000000000002
+  },
+  "fixed_screening": {
+    "Y_atten": 1.1436567998601994,
+    "gamma_swe": 0.9100234167071047,
+    "gamma_ceus": 10.948571937512241,
+    "track_kernel": 0.6084219569398882,
+    "scale": 171.9581522719193
+  },
+  "width_map": {
+    "0.15 mm": {
+      "bmode": {
+        "width_mm": 0.15,
+        "ratio": 1.0
+      },
+      "swe": {
+        "width_mm": 0.4517742799230607,
+        "ratio": 3.011828532820405
+      },
+      "ceus": {
+        "width_mm": 0.37499999999999994,
+        "ratio": 2.5
+      }
+    },
+    "0.35 mm": {
+      "bmode": {
+        "width_mm": 0.35,
+        "ratio": 1.0
+      },
+      "swe": {
+        "width_mm": 0.6325345840347388,
+        "ratio": 1.8072416686706823
+      },
+      "ceus": {
+        "width_mm": 0.875,
+        "ratio": 2.5
+      }
+    },
+    "0.80 mm": {
+      "bmode": {
+        "width_mm": 0.8,
+        "ratio": 1.0
+      },
+      "swe": {
+        "width_mm": 1.1892854997854803,
+        "ratio": 1.4866068747318504
+      },
+      "ceus": {
+        "width_mm": 2.0,
+        "ratio": 2.5
+      }
+    }
+  },
+  "transmit_hz": {
+    "bmode": 7000000.0,
+    "swe": 5000000.0,
+    "ceus": 2800000.0
+  },
+  "track_kernel_m": 0.0004,
+  "y_atten": 1.0,
+  "jacobian_step_convergence": [
+    0.00018515534139343148,
+    4.408859704097766e-05,
+    8.817918369206471e-06,
+    0.0
+  ],
+  "window_sensitivity": {
+    "bmode": {
+      "x_c": 129.94870607190245,
+      "R": 194.03055972233716,
+      "sig_e": 29.278863105396116,
+      "b0": 607.1719834542168,
+      "db": 218.55554289706623,
+      "c_s": 0.0,
+      "alpha0": 0.0,
+      "a_S": 0.0,
+      "v": 0.0,
+      "D": 0.0,
+      "a_C": 0.0,
+      "t0": 0.0,
+      "w0": 5.726421267687326
+    },
+    "swe": {
+      "x_c": 0.0,
+      "R": 0.0,
+      "sig_e": 0.0,
+      "b0": 0.0,
+      "db": 0.0,
+      "c_s": 246.53654546888566,
+      "alpha0": 42.71518450250604,
+      "a_S": 114.99000992205623,
+      "v": 0.0,
+      "D": 0.0,
+      "a_C": 0.0,
+      "t0": 0.0,
+      "w0": 5.641292318211408
+    },
+    "ceus": {
+      "x_c": 0.0,
+      "R": 0.0,
+      "sig_e": 0.0,
+      "b0": 0.0,
+      "db": 0.0,
+      "c_s": 0.0,
+      "alpha0": 0.0,
+      "a_S": 0.0,
+      "v": 1225.272941053946,
+      "D": 147.82136576033767,
+      "a_C": 347.0650795175489,
+      "t0": 200.53634194167867,
+      "w0": 71.28396309732935
+    }
+  },
+  "structural_rank": {
+    "rank": 13,
+    "n_par": 13
+  }
+}

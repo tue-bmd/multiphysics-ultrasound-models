@@ -1,0 +1,53 @@
+{
+  "description": "Nine-point robustness design: nominal truth plus an L8 two-level design over seven tissue parameters. It screens broad parameter combinations without the 2^7=128 runs of a full factorial.",
+  "derive_storage": true,
+  "n_replicates": 1,
+  "configs": [
+    "E2_ceus",
+    "E2_ceus_Acal",
+    "E3_joint_independent",
+    "E4_joint_constitutive_Cvcal",
+    "E5_joint_network",
+    "E8_relax_independent_matched",
+    "E8_relax_constitutive_Cvcal",
+    "E8_relax_constitutive_Cvcal_norm"
+  ],
+  "report": ["mu", "eta_s", "phi", "k", "D", "vmag", "S_v", "C_v"],
+  "comparisons": [
+    {
+      "name": "calibrated_delivery_to_phi",
+      "numerator": "E2_ceus_Acal",
+      "denominator": "E2_ceus",
+      "quantity": "phi"
+    },
+    {
+      "name": "network_prior_to_k_current_protocol",
+      "numerator": "E5_joint_network",
+      "denominator": "E3_joint_independent",
+      "quantity": "k"
+    },
+    {
+      "name": "constitutive_coupling_to_k_with_relaxation",
+      "numerator": "E8_relax_constitutive_Cvcal",
+      "denominator": "E8_relax_independent_matched",
+      "quantity": "k"
+    },
+    {
+      "name": "absolute_amplitude_to_k_with_relaxation",
+      "numerator": "E8_relax_constitutive_Cvcal",
+      "denominator": "E8_relax_constitutive_Cvcal_norm",
+      "quantity": "k"
+    }
+  ],
+  "scenarios": [
+    {"name": "reference", "values": {}},
+    {"name": "L8_01", "values": {"mu": 2000.0, "eta_s": 0.5, "phi": 0.012, "k": 7e-14, "D": 3e-7, "vmag": 4e-4, "C_v": 4e-4}},
+    {"name": "L8_02", "values": {"mu": 2000.0, "eta_s": 0.5, "phi": 0.012, "k": 2e-12, "D": 3e-6, "vmag": 3e-3, "C_v": 2.5e-3}},
+    {"name": "L8_03", "values": {"mu": 2000.0, "eta_s": 4.0, "phi": 0.060, "k": 7e-14, "D": 3e-7, "vmag": 3e-3, "C_v": 2.5e-3}},
+    {"name": "L8_04", "values": {"mu": 2000.0, "eta_s": 4.0, "phi": 0.060, "k": 2e-12, "D": 3e-6, "vmag": 4e-4, "C_v": 4e-4}},
+    {"name": "L8_05", "values": {"mu": 6000.0, "eta_s": 0.5, "phi": 0.060, "k": 7e-14, "D": 3e-6, "vmag": 4e-4, "C_v": 2.5e-3}},
+    {"name": "L8_06", "values": {"mu": 6000.0, "eta_s": 0.5, "phi": 0.060, "k": 2e-12, "D": 3e-7, "vmag": 3e-3, "C_v": 4e-4}},
+    {"name": "L8_07", "values": {"mu": 6000.0, "eta_s": 4.0, "phi": 0.012, "k": 7e-14, "D": 3e-6, "vmag": 3e-3, "C_v": 4e-4}},
+    {"name": "L8_08", "values": {"mu": 6000.0, "eta_s": 4.0, "phi": 0.012, "k": 2e-12, "D": 3e-7, "vmag": 4e-4, "C_v": 2.5e-3}}
+  ]
+}

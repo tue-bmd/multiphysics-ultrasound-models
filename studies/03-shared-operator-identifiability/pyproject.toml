@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "operatorid"
+version = "0.1.0"
+description = "Shared-operator identifiability"
+authors = [{name = "Simona Turco", email = "s.turco@tue.nl"}]
+license = {text = "BSD-3-Clause"}
+requires-python = ">=3.9"
+dependencies = ["numpy>=1.24,<3", "scipy>=1.10,<2", "matplotlib>=3.6,<4"]
+
+[project.scripts]
+operatorid = "operatorid.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["operatorid*"]

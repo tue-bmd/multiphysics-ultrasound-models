@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "porovascular-tissue-sim"
+version = "0.1.0"
+description = "Explicit vascular-network simulator of a perfused organ: contrast-ultrasound transport, strain relaxation and permeability, measured on the same network"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {file = "LICENSE"}
+authors = [{name = "Simona Turco", email = "s.turco@tue.nl"}]
+keywords = ["contrast-enhanced ultrasound", "microvasculature", "strain relaxation", "vascular network", "dispersion", "permeability", "prostate"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Physics",
+    "Topic :: Scientific/Engineering :: Medical Science Apps.",
+]
+dependencies = ["numpy>=1.24,<3", "scipy>=1.10,<2", "matplotlib>=3.6,<4"]
+
+[project.optional-dependencies]
+figures = ["matplotlib>=3.5"]
+test = ["pytest>=7"]
+
+[tool.setuptools.packages.find]
+include = ["porovasc*"]
+
+[tool.pytest.ini_options]
+markers = ["slow: builds a whole gland (about 1-2 min)"]
