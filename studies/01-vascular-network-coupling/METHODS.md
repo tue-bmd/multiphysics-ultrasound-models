@@ -140,11 +140,7 @@ comparisons change only the matrix modulus or only the arterial inlet pressure.
 Effects for each positive quantity $x$ are calculated as
 
 $$
-\Delta\log_{10}x
-=
-\log_{10}\left(
-\frac{x_{\mathrm{perturbed}}}{x_{\mathrm{baseline}}}
-\right).
+\Delta\log_{10}x = \log_{10}\left( \frac{x_{\mathrm{perturbed}}}{x_{\mathrm{baseline}}} \right).
 $$
 
 Voxel-level effects are summarized by the median within each sampling volume,

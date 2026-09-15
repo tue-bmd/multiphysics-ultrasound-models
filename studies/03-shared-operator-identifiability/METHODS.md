@@ -8,13 +8,7 @@ are separate for the B-mode, shear-wave, and contrast observations.
 For observation $m$,
 
 $$
-\mathbf y_m
-=\mathcal H_m\!\left[
-\mathbf F_m(\boldsymbol\theta_m);
-\boldsymbol\psi_{\mathrm{shared}},
-\boldsymbol\psi_m
-\right]
-+\boldsymbol\varepsilon_m,
+\mathbf y_m =\mathcal H_m\!\left[ \mathbf F_m(\boldsymbol\theta_m); \boldsymbol\psi_{\mathrm{shared}}, \boldsymbol\psi_m \right] +\boldsymbol\varepsilon_m,
 $$
 
 where $\mathbf F_m$ is an ideal tissue or transport field,
@@ -32,13 +26,7 @@ All sequences are represented by one aperture-limited width $w_0$. Their
 effective image widths are
 
 $$
-w_B=w_0,
-\qquad
-w_C=\gamma_C\frac{f_B}{f_C}w_0,
-\qquad
-w_S=\sqrt{
-\left(\gamma_S\frac{f_B}{f_S}w_0\right)^2+w_{\mathrm{track}}^2
-}.
+w_B=w_0, \qquad w_C=\gamma_C\frac{f_B}{f_C}w_0, \qquad w_S=\sqrt{ \left(\gamma_S\frac{f_B}{f_S}w_0\right)^2+w_{\mathrm{track}}^2 }.
 $$
 
 The transmit frequencies are 7.0 MHz for B-mode, 5.0 MHz for shear-wave

@@ -34,27 +34,15 @@ relative-fluid inertia used in poroelastic shear-wave models
 ([Aichele and Catheline, 2021](https://doi.org/10.3389/fphy.2021.697990)):
 
 $$
-\nabla\cdot\hat{\boldsymbol\sigma}
-=-\omega^2(\rho\hat{\mathbf u}+\rho_f\hat{\mathbf w}),
-\qquad
--\nabla\hat p
-=-\omega^2(\rho_f\hat{\mathbf u}+\tilde\rho\hat{\mathbf w}),
+\nabla\cdot\hat{\boldsymbol\sigma} =-\omega^2(\rho\hat{\mathbf u}+\rho_f\hat{\mathbf w}), \qquad -\nabla\hat p =-\omega^2(\rho_f\hat{\mathbf u}+\tilde\rho\hat{\mathbf w}),
 $$
 
 $$
-\hat{\boldsymbol\sigma}
-=2G^*(\omega)\hat{\boldsymbol\varepsilon}
-+\lambda(\omega)(\nabla\cdot\hat{\mathbf u})\mathbf I
--\alpha\hat p\mathbf I,
-\qquad
-\hat\zeta=\alpha\nabla\cdot\hat{\mathbf u}+S_v\hat p,
+\hat{\boldsymbol\sigma} =2G^*(\omega)\hat{\boldsymbol\varepsilon} +\lambda(\omega)(\nabla\cdot\hat{\mathbf u})\mathbf I -\alpha\hat p\mathbf I, \qquad \hat\zeta=\alpha\nabla\cdot\hat{\mathbf u}+S_v\hat p,
 $$
 
 $$
-G^*(\omega)=\mu+i\omega\eta_s,
-\qquad
-\tilde\rho(\omega)=\frac{\alpha_\infty\rho_f}{\phi}
--\frac{i\eta_b}{\omega k}.
+G^*(\omega)=\mu+i\omega\eta_s, \qquad \tilde\rho(\omega)=\frac{\alpha_\infty\rho_f}{\phi} -\frac{i\eta_b}{\omega k}.
 $$
 
 Here, $\mathbf u$ is solid displacement, $\mathbf w$ is fluid displacement
@@ -64,19 +52,15 @@ $\zeta$ is the change in fluid content, $\lambda$ is the first Lamé parameter,
 and $\mathbf I$ is the identity tensor. $G^*$ is the complex shear modulus and
 $\tilde\rho$ is the frequency-dependent fluid-inertia term. The relative flux
 $i\omega\mathbf w$ belongs only to the mechanical experiment; it is not used
-as the baseline microbubble drift in the contrast model. This is the based on 
-the assumptions that the two fields are probed sequentially rather than simultaneously.
+as the baseline microbubble drift in the contrast model. This assumes that the
+two fields are probed sequentially rather than simultaneously.
 
 ### 1.1 Shear-wave observation
 
 The divergence-free displacement satisfies
 
 $$
-G^*(\omega)\nabla^2\hat{\mathbf u}_S
-+\rho_{\mathrm{eff}}(\omega)\omega^2\hat{\mathbf u}_S
-=-\hat{\mathbf f}_S,
-\qquad
-\rho_{\mathrm{eff}}=\rho-\frac{\rho_f^2}{\tilde\rho},
+G^*(\omega)\nabla^2\hat{\mathbf u}_S +\rho_{\mathrm{eff}}(\omega)\omega^2\hat{\mathbf u}_S =-\hat{\mathbf f}_S, \qquad \rho_{\mathrm{eff}}=\rho-\frac{\rho_f^2}{\tilde\rho},
 $$
 
 where $\mathbf f_S$ is the shear forcing and $\rho_{\mathrm{eff}}$ is the
@@ -84,12 +68,7 @@ effective dynamic density. For a line source, the cylindrical Green function
 is
 
 $$
-\hat u_S(x,\omega)
-=\hat F(\omega)\frac{i}{4G^*(\omega)}H_0^{(2)}(k_sx),
-\qquad
-k_s=\omega\sqrt{\frac{\rho_{\mathrm{eff}}}{G^*}},
-\qquad
-\hat F(\omega)=F_0\operatorname{sinc}\!\left(\frac{\omega T_p}{2}\right).
+\hat u_S(x,\omega) =\hat F(\omega)\frac{i}{4G^*(\omega)}H_0^{(2)}(k_sx), \qquad k_s=\omega\sqrt{\frac{\rho_{\mathrm{eff}}}{G^*}}, \qquad \hat F(\omega)=F_0\operatorname{sinc}\!\left(\frac{\omega T_p}{2}\right).
 $$
 
 $H_0^{(2)}$ is a Hankel function and $k_s$ is the complex shear wavenumber.
@@ -106,12 +85,7 @@ drained at $z=0$ and sealed at $z=L$, and a compressive stress $P$ is applied at
 $t=0$:
 
 $$
-\frac{\partial p}{\partial t}
-=c_v\frac{\partial^2p}{\partial z^2},
-\qquad
-c_v=\frac{k}{\eta_b S_{\mathrm{tot}}},
-\qquad
-S_{\mathrm{tot}}=S_v+\frac{\alpha^2}{M}.
+\frac{\partial p}{\partial t} =c_v\frac{\partial^2p}{\partial z^2}, \qquad c_v=\frac{k}{\eta_b S_{\mathrm{tot}}}, \qquad S_{\mathrm{tot}}=S_v+\frac{\alpha^2}{M}.
 $$
 
 Here, $c_v$ is the consolidation coefficient and $S_{\mathrm{tot}}$ is total
@@ -119,11 +93,7 @@ storage. $M$ is treated as an independent effective constrained modulus. The
 initial and boundary conditions are
 
 $$
-p(z,0)=\frac{\alpha P}{MS_v+\alpha^2},
-\qquad
-p(0,t)=0,
-\qquad
-\left.\frac{\partial p}{\partial z}\right|_{z=L}=0.
+p(z,0)=\frac{\alpha P}{MS_v+\alpha^2}, \qquad p(0,t)=0, \qquad \left.\frac{\partial p}{\partial z}\right|_{z=L}=0.
 $$
 
 The observed surface compaction is
@@ -146,20 +116,15 @@ contrast-agent kinetics in contrast-enhanced ultrasound
 ([Turco et al., 2020](https://doi.org/10.1016/j.ultrasmedbio.2019.11.008)):
 
 $$
-\frac{\partial(\phi c)}{\partial t}
-+\nabla\cdot\left(\phi c\mathbf v-\phi D\nabla c\right)
-=\phi A\,\delta(\mathbf r-\mathbf r_s)\delta(t-t_0),
+\frac{\partial(\phi c)}{\partial t} +\nabla\cdot\left(\phi c\mathbf v-\phi D\nabla c\right) =\phi A\,\delta(\mathbf r-\mathbf r_s)\delta(t-t_0),
 $$
 
 where $c$ is intravascular microbubble concentration, $\mathbf r_s$ is the
 source position, and $\delta$ is the Dirac delta. The predicted contrast
-occupancy per unit tissue volume, $b=\phi c$, is
+concentration per unit tissue volume, $b=\phi c$, is
 
 $$
-b(\mathbf r,t)
-=\phi A[4\pi D\tau]^{-3/2}
-\exp\!\left[-\frac{|\mathbf r-\mathbf r_s-\mathbf v\tau|^2}{4D\tau}\right],
-\qquad \tau=t-t_0>0.
+b(\mathbf r,t) =\phi A[4\pi D\tau]^{-3/2} \exp\!\left[-\frac{|\mathbf r-\mathbf r_s-\mathbf v\tau|^2}{4D\tau}\right], \qquad \tau=t-t_0>0.
 $$
 
 The contrast field is sampled on a $3\times3\times3$ voxel grid at 2 Hz for
@@ -174,7 +139,7 @@ contrast observations.
 
 | Model | Definition | Purpose |
 |---|---|---|
-| independent | $S_v$ and $\phi$ are unrelated parameters | control with no transfer of information between mechanical storage and contrast occupancy |
+| independent | $S_v$ and $\phi$ are unrelated parameters | control with no transfer of information between mechanical storage and contrast concentration |
 | constitutive | $S_v=\phi C_v$ | links storage per unit tissue volume to vascular volume fraction and fractional vascular compliance |
 | network-informed | $S_v=\phi C_v$, with a joint prior on $\phi$, $k$, $D$, and $\|\mathbf v\|$ | additionally represents their shared dependence on vascular organization |
 
@@ -201,15 +166,13 @@ the logarithms of the four network-related parameters.
 | Observation | Sampling | Noise standard deviation |
 |---|---|---|
 | shear displacement | 21 positions, 8 kHz, 20 ms | 0.2 µm |
-| contrast occupancy | 27 voxels, 2 Hz, 90 s | 2% of peak occupancy |
+| contrast concentration | 27 voxels, 2 Hz, 90 s | 2% of peak concentration |
 | surface relaxation | 20 Hz, 30 s | 1 µm |
 
 Each synthetic observation is modeled as
 
 $$
-\mathbf y=\mathcal F(\boldsymbol\theta)+\boldsymbol\varepsilon,
-\qquad
-\boldsymbol\varepsilon\sim\mathcal N(\mathbf 0,\boldsymbol\Sigma),
+\mathbf y=\mathcal F(\boldsymbol\theta)+\boldsymbol\varepsilon, \qquad \boldsymbol\varepsilon\sim\mathcal N(\mathbf 0,\boldsymbol\Sigma),
 $$
 
 where $\mathcal F$ is the relevant forward model, $\boldsymbol\theta$ is its
