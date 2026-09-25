@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+title: Vascular-mechanical confounding (v0)
+message: If you use this software or its results, please cite it.
+type: software
+version: 0.1.0
+date-released: 2026-09-24
+repository-code: "https://github.com/tue-bmd/multiphysics-ultrasound-models"
+url: "https://github.com/tue-bmd/multiphysics-ultrasound-models/tree/main/studies/04-vascular-mechanical-confound"
+license: BSD-3-Clause
+abstract: >-
+  A simulation study of whether a network-derived contrast-ultrasound
+  observation can reduce confounding between vascular constriction and matrix
+  viscoelasticity in a reduced shear-wave model.
+keywords:
+  - contrast-enhanced ultrasound
+  - shear wave elastography
+  - vascular networks
+  - inverse problems
+  - uncertainty quantification
+authors:
+  - family-names: Turco
+    given-names: Simona
+    email: s.turco@tue.nl
+    affiliation: Eindhoven University of Technology
+    orcid: "https://orcid.org/0000-0002-1520-3930"

@@ -7,10 +7,11 @@ date-released: 2026-09-14
 repository-code: "https://github.com/tue-bmd/multiphysics-ultrasound-models"
 license: BSD-3-Clause
 abstract: >-
-  Three v0 simulation studies of multiphysics ultrasound modeling: vascular
+  Four v0 simulation studies of multiphysics ultrasound modeling: vascular
   organization and its effects on mechanical relaxation and contrast transport,
   parameter identifiability from idealized mechanical and transport fields, and
-  information transfer through a shared measurement operator.
+  information transfer through a shared measurement operator, and reduction of
+  vascular-matrix confounding through a calibrated SWE-CEUS relationship.
 keywords:
   - quantitative ultrasound
   - inverse problems

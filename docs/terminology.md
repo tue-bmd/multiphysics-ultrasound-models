@@ -1,7 +1,7 @@
 # Terminology
 
 The table summarizes the main model parameters and observed physical fields used
-in the three studies. Intermediate variables are defined where their equations
+in the four studies. Intermediate variables are defined where their equations
 are introduced.
 
 | Symbol | Quantity | Unit | Study |
@@ -14,8 +14,9 @@ are introduced.
 | $\mathbf{u}$ | solid-displacement field; simulated mechanical observation | m | 02 |
 | $\mathbf{F}_m$ | ideal physical field for modality $m$, before measurement-operator effects | modality-dependent | 03 |
 | $\mathbf{y}_m$ | simulated observation for modality $m$ | modality-dependent | 03 |
-| $\mu$ | shear modulus | Pa | 02 |
+| $\mu$ | matrix shear modulus | Pa | 02, 04 |
 | $\eta_s$ | solid viscosity | Pa·s | 02 |
+| $\eta$ | matrix shear viscosity | Pa·s | 04 |
 | $k_v$ | vascular-network permeability | m² | 01 |
 | $k$ | effective permeability in the reduced field model | m² | 02 |
 | $A$ | microbubble input-concentration amplitude | arbitrary | 02 |
@@ -24,6 +25,11 @@ are introduced.
 | $L$ | drainage length | m | 02 |
 | $\sigma_e$ | intrinsic lesion-margin width | m | 03 |
 | $w_0$ | shared aperture-limited image width | m | 03 |
+| $s$ | uniform vessel-radius scale relative to baseline | 1 | 04 |
+| $\tau_i$ | relaxation time assigned to vascular segment $i$ | s | 04 |
+| $c_p$ | shear-wave phase velocity | m/s | 04 |
+| $\alpha$ | shear-wave attenuation coefficient | m⁻¹ | 04 |
+| $\mathrm{AUC}$ | area under a contrast-concentration curve | arbitrary concentration unit·s | 04 |
 
 ## Study-specific definitions
 
@@ -48,6 +54,17 @@ In study 01, $C_v$ is prescribed through the vessel-compliance relation. In
 study 02, $C_v$ may be inferred or independently constrained, and
 $S_v=\phi C_v$ is evaluated as a candidate coupling relation.
 
+Study 04 reuses the explicit network geometry and contrast-transport model from
+study 01. The scale $s$ multiplies every explicit lumen radius while the vessel
+topology and path lengths remain fixed. The parameters $\mu$ and $\eta$
+describe the tissue-matrix contribution; the vascular contribution is modeled
+separately as a spectrum of segment relaxation times $\tau_i$.
+
+In study 04, AUC is calculated for each of eight nearby input-voxel
+concentration curves. Their median is the single CEUS value used in inference.
+Its constraint on $s$ is conditional on a calibrated, network-specific
+relationship between AUC and radius scale.
+
 ## Inference measures
 
 **Structural identifiability** describes whether distinct parameters can produce
@@ -62,4 +79,5 @@ interval contains the generating parameter value.
 
 Effects in study 01 are reported as base-10 logarithmic ratios for positive
 quantities. Positive parameters in studies 02 and 03 are represented in natural
-logarithmic coordinates during inference.
+logarithmic coordinates during inference. Study 04 evaluates a regular grid in
+the native coordinates of $\mu$, $\eta$, and $s$.
