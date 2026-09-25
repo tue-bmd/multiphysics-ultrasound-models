@@ -1,0 +1,174 @@
+{
+ "provenance": {
+  "created": "2026-09-25T07:22:49+00:00",
+  "python": "3.12.14",
+  "numpy": "2.5.3",
+  "argv": [
+   "run_diagnostics.py",
+   "--dterms",
+   "60e-6",
+   "40e-6",
+   "30e-6",
+   "--out",
+   "results/diagnostics.json"
+  ],
+  "vmconf_sha256": "5af4c59409a1d3b64ae4d3197f997c962c9f588d7c2b48e3b07980fa3189904c",
+  "porovasc_package": "porovasc",
+  "porovasc_version": "0.1.0",
+  "porovasc_sha256": "29c05478e010950d88dcc44cf40b2533afcdf14ab0ff0587c3369d4d6594d859",
+  "network": {
+   "n_segments": 55230,
+   "params": {
+    "n_feeders": 4,
+    "feed_d": 0.0006,
+    "d_root": 0.0005,
+    "d_term_gland": 3e-05,
+    "d_term_rve": 2e-05,
+    "rve_centres": [
+     [
+      0.0,
+      -0.005,
+      0.0
+     ]
+    ],
+    "rve_half": 0.003,
+    "seed": 1,
+    "alpha": 0.8,
+    "gamma_med": 10.0,
+    "tort_mean": 1.25,
+    "lesion": null
+   },
+   "topology": "738b0321cbb7657d",
+   "path": "06915f12cc2a397f"
+  },
+  "settings": {
+   "seed": 1,
+   "mu": 2000.0,
+   "eta": 1.0,
+   "share": 0.2,
+   "dterms": [
+    6e-05,
+    4e-05,
+    3e-05
+   ],
+   "out": "results/diagnostics.json"
+  }
+ },
+ "stratification": [
+  {
+   "lo_um": 0.0,
+   "hi_um": 14.999999999999998,
+   "frac_segments": 0.26505711318795433,
+   "frac_volume": 0.015241413518556311,
+   "f_max_Hz": 16976.527263135507
+  },
+  {
+   "lo_um": 14.999999999999998,
+   "hi_um": 24.999999999999996,
+   "frac_segments": 0.4722222222222222,
+   "frac_volume": 0.08449874871256748,
+   "f_max_Hz": 6111.549814728783
+  },
+  {
+   "lo_um": 24.999999999999996,
+   "hi_um": 40.0,
+   "frac_segments": 0.18561786085150572,
+   "frac_volume": 0.1209125877773132,
+   "f_max_Hz": 2387.3241463784307
+  },
+  {
+   "lo_um": 40.0,
+   "hi_um": 75.0,
+   "frac_segments": 0.05867082035306334,
+   "frac_volume": 0.17326277472053872,
+   "f_max_Hz": 679.0610905254204
+  },
+  {
+   "lo_um": 75.0,
+   "hi_um": 150.0,
+   "frac_segments": 0.01557632398753894,
+   "frac_volume": 0.3137015257994958,
+   "f_max_Hz": 169.7652726313551
+  },
+  {
+   "lo_um": 150.0,
+   "hi_um": 1000000000.0,
+   "frac_segments": 0.0028556593977154725,
+   "frac_volume": 0.2923829494715285,
+   "f_max_Hz": 3.819718634205488e-12
+  }
+ ],
+ "poiseuille_bracket": [
+  {
+   "f": 50.0,
+   "invalid_weight": 0.0,
+   "retained_weight": 1.0,
+   "c_all": 1.4414150421350276,
+   "c_valid": 1.4414150421350276,
+   "bracket_pct": 0.0
+  },
+  {
+   "f": 100.0,
+   "invalid_weight": 0.13006666252044097,
+   "retained_weight": 0.8699333374795589,
+   "c_all": 1.533672338940957,
+   "c_valid": 1.5220325673473571,
+   "bracket_pct": 0.7589477424909051
+  },
+  {
+   "f": 158.1,
+   "invalid_weight": 0.29238294947152854,
+   "retained_weight": 0.7076170505284715,
+   "c_all": 1.6421899755821685,
+   "c_valid": 1.6060874671457401,
+   "bracket_pct": 2.198436780959509
+  },
+  {
+   "f": 200.0,
+   "invalid_weight": 0.3300484359252413,
+   "retained_weight": 0.6699515640747588,
+   "c_all": 1.7189315687096771,
+   "c_valid": 1.6693723417304196,
+   "bracket_pct": 2.8831413583531633
+  }
+ ],
+ "poiseuille_bracket_d_term_um": 30.0,
+ "resolution": [
+  {
+   "d_term_um": 60.0,
+   "n_seg": 6892,
+   "phi": 0.03285073686650701,
+   "tau_gm_ms": 0.7370845086473287,
+   "inband": 0.5047705206206998,
+   "c_100Hz": 1.5330820558376566,
+   "dG": 785.8012837487266,
+   "c_100Hz_fixed_coupling": 1.5330820558376566,
+   "dG_fixed_coupling": 785.8012837487265,
+   "k_fixed": 11.960177437448758
+  },
+  {
+   "d_term_um": 40.0,
+   "n_seg": 22806,
+   "phi": 0.035198549817696385,
+   "tau_gm_ms": 0.7884218762514773,
+   "inband": 0.34624910382967866,
+   "c_100Hz": 1.5368476987345145,
+   "dG": 783.2088589022766,
+   "c_100Hz_fixed_coupling": 1.5448766389717745,
+   "dG_fixed_coupling": 841.9618027210568,
+   "k_fixed": 11.960177437448758
+  },
+  {
+   "d_term_um": 30.0,
+   "n_seg": 55230,
+   "phi": 0.042494181381594824,
+   "tau_gm_ms": 0.7204885642369275,
+   "inband": 0.38755330431902957,
+   "c_100Hz": 1.533672338940957,
+   "dG": 798.3089355248358,
+   "c_100Hz_fixed_coupling": 1.5620919971699079,
+   "dG_fixed_coupling": 1016.4758987660109,
+   "k_fixed": 11.960177437448758
+  }
+ ]
+}
