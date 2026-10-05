@@ -1,6 +1,6 @@
 # Vascular-mechanical confounding: results
 
-## 1. Study design
+## 1. Study design and model responses
 
 Three vascular-network realizations were evaluated at 30 µm explicit terminal
 diameter. For each network, the CEUS AUC was tabulated over the vascular radius
@@ -10,20 +10,24 @@ viscosity 1 Pa s, radius scale $s=0.8$, and a vascular contribution equal to
 20% of the baseline loss modulus at 200 Hz. The model definitions and their
 literature basis are given in [`METHODS.md`](METHODS.md).
 
-## 2. Network-derived CEUS response
-
 The CEUS AUC increased monotonically with $s$ in all three network
 realizations over $0.65\leq s\leq1.05$. Its absolute value varied across
 networks, so each inference used the response table generated from the matching
 network realization.
 
-![CEUS response](figures/fig1_ceus_response.png)
+![Model and responses](figures/fig6_model_responses.png)
 
-**Figure 1.** Network-derived CEUS AUC against radius scale for three network
-realizations. Values are medians of the AUCs calculated at eight nearby
-input-voxel locations.
+**Figure 1.** The reduced model and the ambiguity it produces (network
+realization 2). (A) The vascular network from study 01 inside the gland, with
+arteries in red and veins in blue, and the 6-mm sampling volume used for
+inference, enlarged below. The inset shows how vessel radius changes with $s$.
+(B) Shear-wave phase velocity for the generating state (black) and for two
+other states that produce a similar SWE response; the three curves lie within
+the 3% observation noise (grey band). (C) CEUS AUC of the same three states, relative to the generating
+state, with the 10% noise band. The states that SWE cannot separate differ by
+18% and 8% in AUC.
 
-## 3. Coupled inference
+## 2. Coupled inference and sensitivity to the coupling relation
 
 With SWE alone, multiple combinations of matrix properties and radius scale
 fitted the data similarly well. Adding CEUS without a shared radius scale did
@@ -47,6 +51,10 @@ realizations. Coverage of the coupled 90% interval was 0.95-0.975 for $\mu$ and
 0.975 for $\eta$, compared with 0.90-0.925 and 0.925, respectively, for SWE
 alone. Across all 120 noise repetitions, the median interval width decreased
 from 8.22% to 6.49% for $\mu$ and from 11.59% to 10.65% for $\eta$.
+Figure 3A shows the corresponding posterior over matrix elasticity and radius
+scale for network realization 2, averaged over the 40 noise realizations: the
+coupled 90% region is shorter along the direction in which SWE alone leaves
+the two parameters correlated.
 
 ![Interval comparison](figures/fig2_interval_comparison.png)
 
@@ -57,8 +65,6 @@ interquartile range, central lines show medians, and whiskers extend to the most
 extreme values within 1.5 times the interquartile range; outliers are not shown.
 Grey lines connect the network-specific means.
 
-## 4. Coupling-relation sensitivity
-
 A displaced AUC-to-radius-scale relationship biased the inferred matrix
 elasticity and progressively reduced coverage. At an offset of 0.10, elasticity
 coverage was 0.75-0.825 across networks, compared with 0.95-0.975 for the
@@ -68,14 +74,22 @@ offsetting it tests the consequence of using an incorrect calibration. Interval
 width alone did not diagnose the failure because the misspecified posterior
 remained relatively narrow.
 
-![Coupling sensitivity](figures/fig3_coupling_sensitivity.png)
+![Posterior and coupling sensitivity](figures/fig7_posterior_misspecification.png)
 
-**Figure 3.** Matrix-elasticity bias, interval width, and coverage as the assumed
-AUC-to-radius-scale relationship is displaced. Lines show means and shaded
-regions show the range across the three network realizations. The dashed line
-marks the nominal 90% coverage.
+**Figure 3.** Joint posterior and sensitivity to the coupling relation. (A)
+Posterior over matrix elasticity and radius
+scale for network realization 2, averaged over the 40 noise realizations, with
+SWE alone (grey) and coupled SWE-CEUS inference (purple); 50% (solid) and 90%
+(dotted) highest-density regions, with + marking the generating values.
+Contours are drawn after light smoothing of the grid posterior. The uncoupled
+control coincides with the SWE-only posterior. (B) Coverage of the 90% interval
+for matrix elasticity (purple, left axis) and its bias (grey, right axis) as
+the assumed AUC-to-radius-scale relationship is displaced. Lines show means and
+shaded regions the range across the three network realizations; the dashed
+line marks the nominal 90% coverage. Over the same offsets the mean interval
+width grows only from 6.6% to 9.6% of the generating value.
 
-## 5. Robustness across generating parameters
+## 3. Robustness across generating parameters
 
 The precision gain varied across the 27 generating-parameter combinations.
 
@@ -98,7 +112,7 @@ the percentage reductions calculated separately for the three networks, with
 40 paired noise repetitions per network. Positive values indicate narrower
 intervals under coupled inference.
 
-## 6. Interpretation
+## 4. Interpretation
 
 Within the reduced model, a transport observation that constrains the radius
 scale can reduce its confounding with matrix parameters in a mechanical
@@ -111,7 +125,7 @@ median reductions were 5.95% for matrix elasticity and 3.55% for matrix
 viscosity. The offset sweep shows the corresponding risk: an incorrect relation
 can increase apparent precision while reducing coverage.
 
-## 7. Limitations
+## 5. Limitations
 
 The vascular contribution to shear is assumed rather than derived from a
 fluid-solid solve on the network. Frequency limits of the associated
@@ -124,9 +138,12 @@ calibrated CEUS amplitude. Numerical uncertainty reductions therefore apply to
 this simulation and should not be interpreted as experimental performance
 estimates.
 
-## 8. Reproduction
+## 6. Reproduction
 
 The commands are listed in [`README.md`](README.md). Final CEUS response tables,
 noisy observations, repetition-level posterior summaries, aggregate summaries,
-and diagnostics are stored in `results/`; figures are generated by
-`run_figures.py` and `run_sweep_figures.py`.
+and diagnostics are stored in `results/`; Figures 2 and 4 are generated by
+`run_figures.py` and `run_sweep_figures.py`. Figures 1 and 3 are rendered by
+`scripts/overview_figure/fig_study04_split.py` from the figure data stored in
+`results/overview_figure/`, which the pipeline described in
+`scripts/overview_figure/README.md` rebuilds from the stored outputs.

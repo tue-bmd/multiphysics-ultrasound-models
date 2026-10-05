@@ -90,6 +90,16 @@ python run_sweep_figures.py \
   --out figures
 ```
 
+The two overview figures of `RESULTS.md` (Figures 1 and 3) are rendered from
+stored figure data with:
+
+```bash
+python scripts/overview_figure/fig_study04_split.py
+```
+
+The pipeline that rebuilds that data from the stored outputs is described in
+[`scripts/overview_figure/README.md`](scripts/overview_figure/README.md).
+
 ## Comparison models
 
 Here, $s$ is the factor multiplying every vessel radius: $s=1$ is the baseline
@@ -113,6 +123,8 @@ network and $s<1$ represents uniform constriction.
 | `vmconf/inference.py` | grid posterior and comparison models |
 | `vmconf/provenance.py` | source, configuration, and network provenance |
 | `results/` | CEUS tables, inference summaries, and diagnostics |
+| `results/overview_figure/` | figure data and network geometry for the overview figures |
+| `scripts/overview_figure/` | pipeline and rendering scripts for the overview figures |
 | `figures/` | figures used in the result summary |
 
 ## Limitations

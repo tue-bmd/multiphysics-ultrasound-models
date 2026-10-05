@@ -6,4 +6,5 @@ build/
 dist/
 .DS_Store
 runs/
-
+results/overview_figure/fwd_seed*.pkl
+results/overview_figure/post_seed*.npz
