@@ -5,6 +5,11 @@ type: software
 version: 0.2.0
 date-released: 2026-10-05
 repository-code: "https://github.com/tue-bmd/multiphysics-ultrasound-models"
+doi: 10.5281/zenodo.23166687
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.22772760
+    description: Concept DOI, resolves to the latest version
 license: BSD-3-Clause
 abstract: >-
   Four v0 simulation studies of multiphysics ultrasound modeling: vascular

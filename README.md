@@ -1,5 +1,7 @@
 # Computational studies toward multiphysics ultrasound
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22772760.svg)](https://doi.org/10.5281/zenodo.22772760)
+
 Multiparametric ultrasound combines measurements of tissue structure,
 mechanical response, and vascular transport. Measurements can be linked in two ways: 
 they may depend on the same tissue property and they may carry the same acquisition effect. 
@@ -68,3 +70,6 @@ results, code, and final text were reviewed and verified by the author.
 
 The code is distributed under the BSD 3-Clause license. Citation metadata is
 provided in `CITATION.cff`.
+Releases are archived on Zenodo: [10.5281/zenodo.22772760](https://doi.org/10.5281/zenodo.22772760) resolves to
+the latest version; this release (v0.2.0) is
+[10.5281/zenodo.23166687](https://doi.org/10.5281/zenodo.23166687).

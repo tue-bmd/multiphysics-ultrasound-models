@@ -5,6 +5,11 @@ type: software
 version: 0.1.1
 date-released: 2026-10-05
 repository-code: "https://github.com/tue-bmd/multiphysics-ultrasound-models"
+doi: 10.5281/zenodo.23166687
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.22772760
+    description: Concept DOI, resolves to the latest version
 url: "https://github.com/tue-bmd/multiphysics-ultrasound-models/tree/main/studies/04-vascular-mechanical-confound"
 license: BSD-3-Clause
 abstract: >-
